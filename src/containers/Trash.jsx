@@ -22,7 +22,7 @@ const Trash = (props) => {
             </div>
                 <div className="course__admin__categories flex">
                     <p>Todos</p>
-                    <p>Categorias</p>
+                    <p>Categoriass</p>
                 </div>
                 <Table/> 
 
