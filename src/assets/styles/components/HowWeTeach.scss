@@ -1,0 +1,62 @@
+/* <-------HOW WE TEACH-------> */
+.how__we__tech {
+    margin: 0px 200px 0px 193px;
+  }
+  
+  .how__we__tech__title {
+    width: 414px;
+    font-style: normal;
+    font-weight: 800;
+    font-family: 'Mont-Bold', Roboto;
+    font-size: 25px;
+    color: #03002b;
+    margin: 110px 0 60px 0px;
+  }
+  
+  .how__we__tech__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+  }
+  @media screen and (max-width: 1325px) {
+    .how__we__tech__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 1px 140px;
+    }
+  }
+  
+  .how__we__tech__info {
+    margin: 0px 0 0 0px;
+  }
+  
+  .how__we__tech__info__img {
+    width: 188px;
+  }
+  .how__we__tech__info__img--2 {
+    width: 188px;
+    margin: -10px;
+  }
+  
+  .how__we__tech__info__title {
+    width: 320px;
+    font-family: 'Mont-Bold', Roboto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    color: #03002b;
+    margin: 0;
+  }
+  
+  .how__we__tech__info__text {
+    width: 350px;
+    font-family: 'Mont-Light';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 20px 0 0px;
+  }
+  /* <-------HOW WE TEACH-------> */
+  

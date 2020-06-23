@@ -1,0 +1,33 @@
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .course__admin__inside__checkbox{
+      margin: 0;
+  }
+  
+  #customers tr{
+    border-bottom: 1px solid #ddd;
+    width: 30px;
+  }
+
+  #customers td{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:hover {
+    background-color: #ddd;
+    cursor: pointer;    
+}
+  
+  #customers th {
+    padding-top: 12px;
+    width: 180px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: #03002B;
+    padding: 15px 0px 15px 10px;
+  }

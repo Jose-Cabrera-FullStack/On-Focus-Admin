@@ -1,0 +1,115 @@
+/* <-------BUTTON-------> */
+
+  .btn__primary {
+    color: #f2f2f2;
+    font-size: 16px;
+    width: 140px;
+    height: 41px;
+    border: 1px solid #b38a58;
+    cursor: pointer;
+    text-align: center;
+    background-color: #b38a58;
+    margin: 0 20px 4px 0px;
+    position: relative;
+    bottom: 5px;
+    font-family: 'Mont-Bold', Roboto;
+    border-radius: 2px;
+  }
+
+  .btn__primary--admin{
+    margin: 20px 0 0 0;
+  }
+
+
+  .checkbox__container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+    padding: 5px 10px 10px 35px;
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #000000;
+  }
+
+  .btn__secundary--about__us{
+    width: 150px;
+    position: relative;
+    top: 120px;
+    left: 120px;
+  }
+
+  .checkbox__container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .checkbox__container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .checkbox__container input:checked ~ .checkmark {
+    background-color: #03002B;;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox__container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox__container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  /* <-------ANIMATION-------> */
+  
+  .btn__primary--fix:hover {
+    background-color: #b38a58;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #b38a58;
+  }
+  .btn__primary:hover {
+    background-color: #b38a58;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid #b38a58;
+  }
+  .btn__secundary--buy:hover  {
+    fill: #fff;
+    background-color: #b38a58;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn__primary--login:hover{
+    border: 1px solid #b38a58;
+  }
+  /* <-------ANIMATION-------> */
+  /* <-------BUTTON-------> */

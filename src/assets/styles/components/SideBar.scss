@@ -1,0 +1,41 @@
+.side__bar{
+    width: 244px;
+    background: #03002B;
+} 
+
+.side__bar__img{
+    width: 66px;
+    height: 62px;
+    margin: 54px 89px 46px 89px;
+}
+
+.side__bar ol{
+    margin: 0;
+    padding: 0;
+}
+
+.side__bar li{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 800;
+    height: 46px;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    color: #BDBDBD;
+    text-align: center;
+    list-style: none;
+}
+
+.side__bar li p{
+    position: relative;
+    top: 10px;
+    margin: 0;
+
+}
+
+.side__bar li:hover{
+    cursor: pointer;
+    background: #B38A58;
+    color: #fff;
+}

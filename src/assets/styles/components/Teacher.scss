@@ -1,0 +1,100 @@
+.teacher__box{
+    width: 1038px;
+    height: 666px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    margin: 0px 0 100px 50px;
+}
+
+.teacher__box__inside{
+    padding: 40px 64px 50px 54px;
+}
+
+.teacher__box h3{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #B38A58;
+}
+
+.teacher__box h5{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+    margin: 10px 0 10px 0;
+}
+
+.teacher__box input{
+    width: 437px;
+    height: 29px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.teacher__box textarea{
+    width: 437px;
+    height: 109px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.teacher__box__inside__left__photo{
+    margin: 10px 0 0 20px;
+}
+
+.teacher__box__inside__left__profile{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #B38A58;
+}
+
+.teacher__box__inside__left__recommended{
+    font-family: 'Mont-Regular';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+
+.teacher__box__inside__left__arrow{
+    position: relative;
+    right: 25px;
+}
+
+.teacher__box__inside__right{
+    margin: 0 0 0 40px;
+}
+
+.teacher__box__inside__right img{
+    margin: 0px 10px 0 0;
+
+}
+
+.teacher__box__inside__right__inside{
+    margin: 10px 0 0 0;
+}
+
+.btn__primary--teacher{
+    position: relative;
+    top: 50px;
+    left: 300px;
+}
+
+.btn__primary--teacher:hover{
+background: #03002B;
+}

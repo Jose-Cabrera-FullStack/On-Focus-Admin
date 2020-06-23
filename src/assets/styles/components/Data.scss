@@ -1,0 +1,239 @@
+.data {
+    margin: 42px 200px 50px 200px;
+    height: 680px;
+}
+
+.data h4{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 23px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #03002B;
+    margin: 0;
+}
+.data h5{
+    font-family: 'Mont-Semi-Bold';
+    font-style: normal;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #000;
+    margin: 5px 0 40px 0;
+
+}
+
+.data__input__text{
+    width: 448px;
+    height: 37px;
+    background: #FFFFFF;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    margin: 11px 0 0px 0px;
+}
+
+.btn__secundary--data{
+    width: 122px;
+    margin: 40px 0 0 0;
+}
+
+.data h1{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #03002B;
+    margin: 59px 0 20px 0;
+}
+.data__text{
+    width: 576px;
+    font-family: Judson;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 148.3%;
+    color: #000000;
+    margin: 30px 0 0 0;
+}
+
+.data__input__check{
+    margin: 0px 0 0 0;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.data__input__text__area{
+    width: 448px;
+    height: 98px;
+    padding: 10px 0px 0 10px;
+    font-family: Mont-Regular;
+    font-size: 12px;
+}
+
+
+.data__right{
+    margin: 0 0px 0px 40px;
+}
+
+.data__right p{
+    font-family: 'Mont-Regular';
+    font-size: 14px;
+    margin: 0 0 30px 0;
+}
+
+.data__right img{
+    margin: 0px 10px 0px 0;
+    width: 33.3px;
+    height: 33.3px;
+}
+
+.data__right__title{
+    height: 37px;
+    left: 687px;
+    top: 568px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 152.3%;
+    letter-spacing: -0.03em;
+    color: #000000;
+}
+
+.btn__secundary--politicy{
+    width: 321px;
+    height: 37px;
+    margin: 0;
+    color: black;
+    border: 2px solid black;
+    margin: 5px 0 0 0;
+}
+.btn__secundary--politicy:hover{
+    border: 2px solid #b38a58
+}
+
+.btn__secundary--politicy__text{
+    position: relative;
+    width: 321px;
+    height: 37px;
+    bottom: 5px;
+    font-family: 'Mont-Regular';
+    font-size: 12px;
+
+}
+
+.politicy__inside__right{
+    margin: -25px 0px 0px 65px;
+}
+.politicy__inside__right h2{
+    left: 588px;
+    top: 143px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #03002B;
+    margin: 25px 0 20px 0;
+}
+
+.politicy__inside__right h5{
+    font-size: 14px;
+    font-family: 'Mont-Bold';
+    color: black;
+}
+
+.politicy__inside__right p{
+    font-size: 15px;
+    width: 519px;
+    font-family: 'Judson';
+    margin: 0 0 30px 0;
+}
+
+.contact__socials--youtube{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/youtube-border.svg);
+}
+.contact__socials--facebook{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/facebook-border.svg);
+}
+.contact__socials--instagram{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/instagram-border.svg);
+}
+.contact__socials--linkedin{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/linkedin-border.svg);
+}
+.contact__socials--instagram:hover{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    transition: all 0.2s ease-in-out;
+    background-image: url(../../static/images/svg/instagram-hover.svg);
+}
+.contact__socials--linkedin:hover{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    margin: 7px 0px 30px 0px;
+    transition: all 0.2s ease-in-out;
+    background-image: url(../../static/images/svg/linkedin-hover.svg);
+}
+.contact__socials--youtube:hover{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/youtube-hover.svg);
+}
+.contact__socials--facebook:hover{
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
+    margin: 7px 0px 30px 0px;
+    background-image: url(../../static/images/svg/facebook-hover.svg);
+}
+
+.contact__check__message{
+    margin: 30px 200px 0 0 ;
+}
+
+.contact__check__message p{
+    font-family: 'Mont-Semi-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #000000;
+}

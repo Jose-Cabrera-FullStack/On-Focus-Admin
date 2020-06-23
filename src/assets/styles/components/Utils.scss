@@ -1,0 +1,57 @@
+
+.utils__hero{
+    height: 252px;
+    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-course.png);
+    background-size: cover;
+}
+
+.utils__hero__contact{
+    height: 252px;
+    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-contact.png);
+    background-size: cover;
+}
+
+.utils__hero__profile{
+    height: 254px;
+    background-image:linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(../../static/images/img/hero-profile.png);
+    background-size: cover;
+}
+
+.utils__hero__title{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 39px;
+    line-height: 113.3%;
+    color: #F2F2F2;
+    margin: 0;
+
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.beadcrumbs{
+    margin: 20px 0 0 0px;
+    cursor: pointer;
+}
+
+.beadcrumbs:hover{
+    color: red;
+}
+
+.beadcrumbs h5{
+    margin: 20px 0px 0 10px;
+    font-family: Mont-Light;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+.beadcrumbs img{
+    margin: 20px 0 0 0px;
+}

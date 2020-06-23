@@ -1,0 +1,150 @@
+.shopping__car{
+    margin: 0px 200px 0px 200px;
+    transition: all 0.2s ease-in-out;
+}
+.shopping__car h1{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 113.3%;
+    color: #0D0056;
+}
+
+.shopping__car__box__inside{
+    margin: 40px 51px 0px 40px;
+}
+
+.hero__view__promo__price--shopping__car{
+    width: 120px;
+}
+
+.hero__view__promo__price__before--shopping__car{
+    width: 70px;
+}
+
+.shopping__car__box{
+    width: 370px;
+    height: 275px;
+    background: #F2F2F2;
+    position: relative;
+    left: 70px;
+}
+.shopping__car__box__inside__text{
+    font-family: 'Mont-Light';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    text-align: left;
+    letter-spacing: -0.03em;
+    color: #000000;
+    margin: 0px 90px 10px 0;
+}
+
+.shopping__car__box__inside__text--red{
+    color: #FF3F31;
+}
+
+.shopping__car__box__inside__promo--red{
+    color: #FF3F31;
+    font-style: normal;
+    font-family: Mont-Bold;
+    font-size: 15px;
+}
+
+.shopping__car__box__inside__discounts{
+    color: #B38A58;
+    font-style: normal;
+    font-family: Mont-Bold;
+}
+
+.shopping__car__box__inside__line{
+
+border: 1px solid #000000;
+}
+
+.shopping__car__box__inside strong{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    text-align: right;
+    letter-spacing: -0.03em;
+    color: #000000;
+}
+.shopping__car__box__inside strong{
+    margin: 0;
+}
+
+.shopping__car__box__inside__promo{
+    position: relative;
+    top: 20px;
+    left: 10px;
+}
+
+.shopping__car__line{
+    width: 37vw;
+    border: 1px solid #BDBDBD;
+    margin: 30px 0px 30px 40px;
+}
+
+.shopping__car__box__inside__total{
+    width: 294px;
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    position: relative;
+    color: #03002B;
+    bottom: 20px;
+}
+.shopping__car__box__inside__total--price{
+    position: relative;
+    left: 70px;
+}
+
+.shopping__car--position{
+    position: relative;
+    left: 50px;
+    top: -10px;
+}
+
+.hero__view__promo__title--shopping__car{
+    margin: 25px 0 0 0;
+}
+
+.hero__view__promo__teacher--shopping{
+    font-family: 'Mont-Light';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 135.3%;
+    letter-spacing: -0.03em;
+    color: #4F4F4F;
+    margin: 0;
+}
+
+.shopping__car__box__inside__button{
+    position: relative;
+    top: -15px;
+    left: 40px;
+}
+
+.hero__view__promo__price__delete--shopping__car{
+    position: absolute;
+    left: 47vw;
+}
+
+
+@media screen and (max-width: 1325px) {
+    .shopping-none {
+      display: none;
+    }
+    .shopping__car {
+        margin: 0px 150px 0px 150px;
+    }
+  }

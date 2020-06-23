@@ -1,0 +1,70 @@
+@import "./Fonts.scss";
+@import "./Vars.scss";
+@import "./Media.scss";
+@import "./Button.scss";
+@import "./Grid.scss";
+
+body {
+  margin: 0;
+  font-family: 'Mont-Regular', Roboto;
+}
+
+input[type="text"]{
+  padding: 0px 0px 0 10px;
+  font-family: Mont-Regular;
+  font-size: 12px;
+}
+
+input:focus{
+  outline: solid 1px #b38a58;
+}
+
+textarea:focus{
+  outline: solid 1px #b38a58;
+}
+
+.display-none{
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid-1 {
+  grid-column: 1;
+}
+
+.grid-2 {
+  grid-column: 2;
+}
+
+.grid-3 {
+  grid-column: 4;
+}
+
+.grid-4 {
+  grid-column: 5;
+}
+.grid-column-2--fix{
+  grid-template-columns: 1fr 1.7fr;
+  margin: 0 0 100px 0;
+}
+.grid-column-2{
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 100px 0;
+}
+.grid-column-3{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . . .';
+  margin: 0px 0 70px 0px;
+}
+
+.text-decoration{
+  text-decoration: none;
+}
+
+.none{
+  display: none;
+}

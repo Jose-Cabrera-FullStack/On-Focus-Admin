@@ -1,0 +1,130 @@
+.course__admin{
+    margin: 99px 0 0 51px;
+}
+
+.course__admin h1{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    color: #03002B;
+}
+
+.btn__primary--course__admin{
+    margin: 15px 0px 0 40px;
+}
+
+.course__admin__input{
+    width: 240px;
+    height: 29px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.22);
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.course__admin__input__img{
+    position: relative;
+    bottom: 0px;
+    left: -25px;
+}
+
+.course__admin__session{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+.course__admin__session p{
+    font-family: 'Mont-Light';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #B38A58;
+    text-align-last: right;
+    position: relative;
+    right: 15px;
+}
+
+.course__admin__categories{
+    margin: 0 0 0 50px;
+}
+
+.course__admin__categories p{
+    margin: 0 26px 0 0 ;
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+
+.course__admin__inside{
+    height: 832px;
+    left: 295px;
+    top: 191px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.24);
+    border-radius: 5px 5px 0px 0px;
+    margin: 20px 68px 0 50px;
+}
+
+.course__admin__inside__title{
+    list-style: none;
+    margin: 0px 0 20px 0px;
+}
+
+
+.course__admin__inside__title li{
+    font-family: 'Mont-Bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #03002B;
+    position: relative;
+    top: 13px;
+}
+
+.course__admin__inside__title__element--name{
+    margin: 0px 200px 0 20px;
+}
+
+.course__admin__inside__title__element--teach{
+    margin: 0 100px 0 0;
+    
+}
+.course__admin__inside__title__element--categories{
+    margin: 0 70px 0 0;
+}
+.course__admin__inside__title__element--date{
+    margin: 0 46px 0 0;
+}
+.course__admin__inside__title__element--state{
+    margin: 0 80px 0 0;
+}
+
+.course__admin__inside__text{
+    list-style: none;
+}
+
+.course__admin__inside__text li{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    color: #4F4F4F;
+}
+
+.course__admin__inside__line{
+    border: 1px solid #E0E0E0;
+}

@@ -1,0 +1,76 @@
+.visualization{
+    background: #03002B;
+    color: #F2F2F2;
+}
+
+.visualization__navbar{
+    padding: 25px;
+    border-bottom: 1px solid;
+}
+.visualization__navbar h2{
+    height: 20px;
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135.3%;
+    letter-spacing: -0.02em;
+    color: #F2F2F2;
+    margin: 0 0 0 15px;
+}
+
+.visualization__grid{
+    display: grid;
+    grid-template-columns: 415px 1fr;
+    gap: 1px 1px;
+}
+
+.visualization__sidebar{
+    margin: 25px;
+    height: 644.5px;
+}
+
+.visualization__sidebar__list{
+    margin: 0 0 20px 0px;
+    height: 52px;
+    border: 1px solid #393758;
+    list-style: none;
+}
+
+.visualization__sidebar__list__box{
+    margin: 10px 0px 0px 65px;
+}
+
+.visualization__sidebar__title{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.visualization__sidebar__arrow{
+    margin: 0px 0 0 60px;
+    width: 22px;
+}
+
+.visualization__sidebar__text{
+    font-family: 'Mont-Regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #F2F2F2;
+    margin: 0;
+}
+
+.visualization__video{
+    background-image: linear-gradient(to bottom, #1c1b5200, #03002bd6),
+      url(../../static/images/img/video.png);
+    background-size: cover;
+    height: 609px;
+}
