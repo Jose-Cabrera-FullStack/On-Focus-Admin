@@ -1,13 +1,15 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     publicPath: './'
+    // publicPath: '/' Para Development
     // publicPath: './' Para produccion
   },
   resolve: {
@@ -15,45 +17,44 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        {
+            test: /\.(js|jsx|jss)$/,
+            exclude: /(node_modules[\/\\])(?!mqtt)/,
+            use: [
+                {
+                    loader: 'babel-loader',
+                }
+            ]
+        },
+        {
+          test: /\.scss$/,
+          loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
       },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }
-        ]
-      },
-      {
-        test: /\.(s*)css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.(png|gif|jpg|svg|ttf|eot|otf)$/,
-        use: [
-          {
-            'loader': 'file-loader',
+        {
+            test: /\.(woff|woff2|eot|ttf|otf)$/,
+            exclude: /node_modules/,
+            loader: 'file-loader',
             options: {
-              name: '../assets/[name].[ext]',
-              // name: '../assets/[name].[ext]', Para producción
+                limit: 1024,
+                name: '[name].[ext]',
+                mimetype: 'application/font-otf',
+                publicPath: 'font/',
+                outputPath: 'font/'
             }
-          }
-        ]
-      }
-    ]
-  },
+        },
+        {
+            test: /\.(jpg|png|svg)$/,
+            exclude: /node_modules/,
+            loader: 'file-loader',
+            options: {
+                limit: 1024,
+                name: '[name].[ext]',
+                publicPath: 'img/',
+                outputPath: 'img/'
+            }
+        }
+    ],
+},
   devServer:{
     historyApiFallback:true,
   },
@@ -65,5 +66,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css'
     }),
+    new ExtractTextPlugin({
+      filename: "bundle.css",
+    disable: false,
+    allChunks: true}),
   ]
 };
