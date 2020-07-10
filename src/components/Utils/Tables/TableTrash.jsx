@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import Icon from '../../../assets/static/images/svg/icon-trash.svg'
 
@@ -60,4 +59,4 @@ const SideBar = () => {
   );
 }
 
-export default connect(null,null)(SideBar);
+export default SideBar;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import SideBar from '../components/Utils/SideBar';
 import DataBox from '../components/Teachers/DataBox'
@@ -24,4 +23,4 @@ const Categories = (props) => {
   );
 }
 
-export default connect(null,null)(Categories);
+export default Categories;

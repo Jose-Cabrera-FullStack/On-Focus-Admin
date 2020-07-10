@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import '../assets/styles/App.scss';
 
@@ -15,4 +14,4 @@ const Course = () => {
   );
 }
 
-export default connect(null,null)(Course);
+export default Course;

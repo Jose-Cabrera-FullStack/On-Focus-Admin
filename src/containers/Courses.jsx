@@ -1,8 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import HeroCoursePlus from '../components/Course/HeroCoursePlus';
 import CourseInfo from '../components/Course/CourseInfo';
 import CourseInclusive from '../components/Course/CourseInclusive';
@@ -20,7 +17,6 @@ const Course = () => {
   return(
     <div className="App">
 
-        <Header/>
         <HeroCoursePlus/>
         <CourseInfo/>
         <CourseInclusive/>
@@ -29,11 +25,10 @@ const Course = () => {
         <CourseRecomendation/>
         <CourseTeacher/>
         <HowWeTeach grid={grid}/>
-        <Footer/>
     
     </div>
 
   );
 }
 
-export default connect(null,null)(Course);
+export default Course;
