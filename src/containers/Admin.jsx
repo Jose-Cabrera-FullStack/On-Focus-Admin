@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { registerRequest } from '../actions'
 import moment from "moment"
@@ -68,8 +67,5 @@ const Register = (props) => {
   );
 };
 
-const mapDispatchToProps = {
-  registerRequest,
-};
 
-export default connect(null, mapDispatchToProps)(Register);
+export default Register;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter,Switch,HashRouter as Router,Route,Redirect} from 'react-router-dom';
-import Courses from '../containers/Courses';
+import '../assets/styles/App.scss';
 import Admin from '../containers/Admin';
 import Categories from '../containers/Categories';
 import CourseList from '../containers/CourseList';

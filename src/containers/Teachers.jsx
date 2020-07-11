@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 
 import SideBar from '../components/Utils/SideBar';
 import Button from '../components/Utils/Button'
@@ -32,4 +31,4 @@ const Teachers = (props) => {
   );
 }
 
-export default connect(null,null)(Teachers);
+export default Teachers;

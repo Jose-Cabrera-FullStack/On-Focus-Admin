@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 
 import Logo from '../../assets/static/images/svg/logo-small.svg';
 
@@ -11,14 +11,14 @@ const SideBar = () => {
     <section className="side__bar">
             <img className="side__bar__img" src={Logo} alt="Logo de Focus Minds"/>
             <ol>
-                <li><p>Curso</p> </li>
-                <li><p>Categorías</p> </li>
-                <li><p>Profesores</p> </li>
-                <li><p>Alumnos</p> </li>
-                <li><p>Papelera</p> </li>
+                <NavLink activeClassName="side__bar--select" to="/cursos"><li>Curso</li></NavLink>
+                <NavLink activeClassName="side__bar--select" to="/categorias"><li>Categorías</li></NavLink>
+                <NavLink activeClassName="side__bar--select" to="/profesores"><li>Profesores</li></NavLink>
+                <NavLink activeClassName="side__bar--select" to="/alumnos"><li>Alumnos</li></NavLink> 
+                <NavLink activeClassName="side__bar--select" to="/papelera"><li>Papelera</li></NavLink>
             </ol>
     </section>
   );
 }
 
-export default connect(null,null)(SideBar);
+export default SideBar;
