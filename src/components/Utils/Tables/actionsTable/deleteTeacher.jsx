@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import apiTeachers from "../../../../api/apiTeachers"
+import Icon from '../../../../assets/static/images/svg/icon-trash.svg'
 
 class DeleteTeacher extends Component {
     deleteUser = event => {
@@ -16,7 +17,7 @@ class DeleteTeacher extends Component {
     }
   
     render() {
-        return <div onClick={this.deleteUser}>Delete</div>
+        return <div onClick={this.deleteUser}><img src={Icon} alt="Borrar"/></div>
     }
   }
 

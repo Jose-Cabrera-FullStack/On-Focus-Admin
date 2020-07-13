@@ -1,0 +1,4 @@
+{
+    "connectionString": "https://backend-devel.herokuapp.com/api",
+    "secret": ""
+}

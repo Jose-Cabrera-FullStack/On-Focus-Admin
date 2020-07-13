@@ -14,9 +14,7 @@ const Row = ({id, name, status, coursesAssigned }) => {
             <td><input type="checkbox" name="" id="" checked={check}/>{status}</td>
             <td>{coursesAssigned}</td>
             <td>Añadir/Quitar cursos</td>
-            <td><img src={Icon} alt="" id={id}/><span>
-                            <DeleteTeacher id={id} />
-                        </span></td>
+            <td><span><DeleteTeacher id={id} /></span></td>
         </>
   );
 }
