@@ -1,7 +1,8 @@
+const config = require("./apiConfig.json");
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:4000/api',
+    baseURL: config.connectionString,
 })
 
 // Teachers Endpoints
