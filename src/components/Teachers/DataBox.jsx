@@ -31,7 +31,7 @@ const DataBox = () => (
                 <input type="text"/>
             </div>
             <div>
-                <h5>Nombre completo</h5>
+                <h5>Titulos / Estudios</h5>
                 <input type="text"/>
             </div>
             <div>
