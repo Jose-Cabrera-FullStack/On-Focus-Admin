@@ -3,7 +3,7 @@ import '../../../../assets/styles/components/Table.scss';
 import DeleteTeacher from '../actionsTable/deleteTeacher'
 
 const RowTeachers = ({id, name, status, coursesAssigned }) => {
-  if(status == "Activo") {
+  if(status == true) {
     var check = "checked"
   }
   return(
