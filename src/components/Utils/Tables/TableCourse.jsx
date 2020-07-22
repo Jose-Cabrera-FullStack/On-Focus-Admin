@@ -51,7 +51,7 @@ const SideBar = () => {
         </tbody>
       </table>
     </section>
-  );
-};
+  )
+}
 
 export default SideBar;

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import apiTeachers from "../../../api/apiTeachers";
-
 import RowTeachers from "./Data/RowTeachers";
-
 import "../../../assets/styles/components/Table.scss";
 
 const SideBar = () => {
@@ -45,7 +43,7 @@ const SideBar = () => {
                   id={data[index]._id}
                   name={data[index].name}
                   status={status}
-                  coursesAssigned={data[index].courses}
+                  coursesAssigned={"no data"}
                 />
               </tr>
             );
