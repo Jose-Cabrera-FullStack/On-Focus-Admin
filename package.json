@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --port 9001 --open --mode development",
     "start": "webpack-dev-server --port 9001 --open --mode production",
-    "heroku-postbuild": "webpack -p" 
+    "heroku-postbuild": "webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -39,7 +39,7 @@
     "history": "4.9.0",
     "ignore-styles": "5.0.1",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.27.0",
     "nodemon": "1.19.1",
     "passport": "0.4.0",
     "passport-http": "0.3.0",

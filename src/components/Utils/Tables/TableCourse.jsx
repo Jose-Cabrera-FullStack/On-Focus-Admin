@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import apiCourses from "../../../api/apiCourses";
-
+import Moment from 'moment';
 import RowCourses from "./Data/RowCourses";
-
 import "../../../assets/styles/components/Table.scss";
 
 const SideBar = () => {
@@ -35,6 +34,8 @@ const SideBar = () => {
             <th></th>
           </tr>
           {Object.keys(data).map((index) => {
+           Moment.locale('en');
+           var dt = data[index].creation_date
             return (
               <tr key={index}>
                 <RowCourses
@@ -42,7 +43,7 @@ const SideBar = () => {
                   name={data[index].name}
                   teacher={"Lorem Ipsum"}
                   category={"Lorem Ipsum"}
-                  creation_date={data[index].creation_date}
+                  creation_date={Moment(dt).format('DD/MM/YY')} 
                   status={data[index].status}
                 />
               </tr>
