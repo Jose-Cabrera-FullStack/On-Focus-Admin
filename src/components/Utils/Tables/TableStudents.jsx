@@ -3,6 +3,7 @@ import apiStudents from "../../../api/apiStudents";
 import RowStudents from "./Data/RowStudents";
 import "../../../assets/styles/components/Table.scss";
 import Accordion from "../../Accordion/Accordion";
+import Moment from 'moment';
 
 const SideBar = () => {
   const [data, SetData] = useState([]);
@@ -39,7 +40,7 @@ const SideBar = () => {
                     name={data[index].name}
                     country={data[index].country}
                     email={data[index].email}
-                    signup_date={data[index].signup_date}
+                    signup_date={Moment(data[index].signup_date).format('DD/MM/YY')} 
                     payment_method={data[index].payment_method}
                     purchased_courses={data[index].purchased_courses}
                   />

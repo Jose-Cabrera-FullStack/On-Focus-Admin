@@ -35,7 +35,6 @@ const SideBar = () => {
           </tr>
           {Object.keys(data).map((index) => {
            Moment.locale('en');
-           var dt = data[index].creation_date
             return (
               <tr key={index}>
                 <RowCourses
@@ -43,7 +42,7 @@ const SideBar = () => {
                   name={data[index].name}
                   teacher={"Lorem Ipsum"}
                   category={"Lorem Ipsum"}
-                  creation_date={Moment(dt).format('DD/MM/YY')} 
+                  creation_date={Moment(data[index].creation_date).format('DD/MM/YY')} 
                   status={data[index].status}
                 />
               </tr>

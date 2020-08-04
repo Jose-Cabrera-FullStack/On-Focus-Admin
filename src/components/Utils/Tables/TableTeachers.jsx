@@ -32,17 +32,12 @@ const SideBar = () => {
             <th></th>
           </tr>
           {Object.keys(data).map((index) => {
-            if (data[index].status == true) {
-              var status = "Activo";
-            } else {
-              status = "Inactivo";
-            }
             return (
               <tr key={index}>
                 <RowTeachers
                   id={data[index]._id}
                   name={data[index].name}
-                  status={status}
+                  status={data[index].status}
                   coursesAssigned={"no data"}
                 />
               </tr>
