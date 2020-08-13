@@ -8,10 +8,10 @@ class DeleteTeacher extends Component {
   
         if (
             window.confirm(
-                `Do you want to delete this teacher permanently?`,
+                `Do you want to send this teacher to trash?`,
             )
         ) {
-            apiTeachers.deleteTeacherById(this.props.id)
+            apiTeachers.sendTeacherToTrash(this.props.id)
             window.location.reload()
         }
     }
