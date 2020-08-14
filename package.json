@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Jose-Cabrera-FullStack.github.io/On-Focus-Admin",
   "name": "focus",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +8,9 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --port 9001 --open --mode development",
     "start": "webpack-dev-server --port 9001 --open --mode production",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "webpack -p",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -81,6 +84,7 @@
     "css-loader": "3.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "4.0.0",
+    "gh-pages": "^3.1.0",
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.2.0",
     "mini-css-extract-plugin": "0.7.0",
