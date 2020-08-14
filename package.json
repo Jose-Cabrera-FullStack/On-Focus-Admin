@@ -8,8 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --port 9001 --open --mode development",
     "start": "webpack-dev-server --port 9001 --open --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
