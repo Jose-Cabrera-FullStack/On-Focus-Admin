@@ -9,6 +9,7 @@ const api = axios.create({
 export const insertCourse = payload => api.post(`/course`, payload)
 export const getAllCourses = () => api.get(`/course`)
 export const updateCourseById = (id, payload) => api.put(`/course/${id}`, payload)
+export const sendCourseToTrash = (id, payload) => api.put(`/unpublishcourse/${id}`, payload)
 export const deleteCourseById = id => api.delete(`/course/${id}`)
 export const getCourseById = id => api.get(`/course/${id}`)
 
@@ -16,6 +17,7 @@ const apiCourses = {
     insertCourse,
     getAllCourses,
     updateCourseById,
+    sendCourseToTrash,
     deleteCourseById,
     getCourseById,
 }

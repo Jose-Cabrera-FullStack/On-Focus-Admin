@@ -16,7 +16,7 @@ const Trash = (props) => {
         <div>
             <div className="course__admin flex">
                 <h1>Papelera</h1>
-                <Button text={'Añadir nuevo'} position={"btn__primary--course__admin"}/>
+                <span>Vaciar Papelera</span>
                 <Search/>
             </div>
                 <div className="course__admin__categories flex">

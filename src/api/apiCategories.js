@@ -9,6 +9,7 @@ const api = axios.create({
 export const insertCategory = payload => api.post(`/category`, payload)
 export const getAllCategories = () => api.get(`/category`)
 export const updateCategoryById = (id, payload) => api.put(`/category/${id}`, payload)
+export const sendCategoryToTrash = (id, payload) => api.put(`/unpublishcategory/${id}`, payload)
 export const deleteCategoryById = id => api.delete(`/category/${id}`)
 export const getCategoryById = id => api.get(`/category/${id}`)
 
@@ -16,6 +17,7 @@ const apiCategories = {
     insertCategory,
     getAllCategories,
     updateCategoryById,
+    sendCategoryToTrash,
     deleteCategoryById,
     getCategoryById,
 }

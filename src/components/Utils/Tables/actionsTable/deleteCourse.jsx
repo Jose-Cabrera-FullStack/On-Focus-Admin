@@ -8,16 +8,16 @@ class DeleteCourse extends Component {
   
         if (
             window.confirm(
-                `Do you want to delete this course permanently?`,
+                `Do you want to send this course to trash?`,
             )
         ) {
-            apiCourses.deleteCourseById(this.props.id)
+            apiCourses.sendCourseToTrash(this.props.id)
             window.location.reload()
         }
     }
   
     render() {
-        return <div onClick={this.deleteUser}><img src={Icon} alt="Borrar"/></div>
+        return <div onClick={this.deleteUser}><img src={Icon} alt="Enviar a la papelera"/></div>
     }
   }
 
