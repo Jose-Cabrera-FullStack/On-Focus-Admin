@@ -8,16 +8,16 @@ class DeleteCategory extends Component {
   
         if (
             window.confirm(
-                `Do you want to delete this category permanently?`,
+                `Do you want to send this category to trash?`,
             )
         ) {
-            apiCategories.deleteCategoryById(this.props.id)
+            apiCategories.sendCategoryToTrash(this.props.id)
             window.location.reload()
         }
     }
   
     render() {
-        return <div onClick={this.deleteUser}><img src={Icon} alt="Borrar"/></div>
+        return <div onClick={this.deleteUser}><img src={Icon} alt="Enviar a la papelera"/></div>
     }
   }
 

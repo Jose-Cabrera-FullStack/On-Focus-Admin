@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import apiTrash from "../../../api/apiTrash";
 import RowTrash from "./Data/RowTrash";
 import "../../../assets/styles/components/Table.scss";
+import Moment from 'moment';
 
 const SideBar = () => {
   const [data, SetData] = useState([]);
@@ -35,10 +36,10 @@ const SideBar = () => {
             return (
               <tr key={index}>
                 <RowTrash
-                  id={data[index]._id}
+                  id={data[index].original_id_hash}
                   name={data[index].name}
-                  status={data[index].status}
-                  coursesAssigned={"no data"}
+                  type={data[index].type}
+                  creation_date={Moment(data[index].creation_date).format('DD/MM/YY')}
                 />
               </tr>
             );
