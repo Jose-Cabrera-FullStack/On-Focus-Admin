@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter,Switch,HashRouter as Router,Route,Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import PrivateRoute from './privateRoute';
 import '../assets/styles/App.scss';
 import Login from '../containers/Admin';
 import Categories from '../containers/Categories';
@@ -10,22 +11,18 @@ import Student from '../containers/Student';
 import Trash from '../containers/Trash';
 import NotFound from '../containers/NotFound';
 
-
 const App = () => (
     // Arreglar para produccion las rutas
-    <BrowserRouter>
-        <Switch>
-            <Redirect exact from="/" to="/admin" component={Login} />
-            <Route exact path="/admin" component={Login} />
-            <Route exact path="/cursos" component={CourseList} />
-            <Route exact path="/categorias" component={Categories} />
-            <Route exact path="/profesores" component={Teachers} />
-            <Route exact path="/profesores-creacion" component={TeachersMakers} />
-            <Route exact path="/alumnos" component={Student} />
-            <Route exact path="/papelera" component={Trash} />
-            <Route component={NotFound} />
-        </Switch>
-    </BrowserRouter>
+    <Router>
+            <Route exact path="/" component={Login}/>
+            <Route path="/admin" component={Login} />
+            <PrivateRoute path="/cursos" component={CourseList} />
+            <PrivateRoute path="/categorias" component={Categories} />
+            <PrivateRoute path="/profesores" component={Teachers} />
+            <PrivateRoute path="/profesores-creacion" component={TeachersMakers} />
+            <PrivateRoute path="/alumnos" component={Student} />
+            <PrivateRoute path="/papelera" component={Trash} />
+    </Router>
 )
 
 export default App;
