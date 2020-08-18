@@ -5,7 +5,6 @@ import Button from '../components/Utils/Button'
 import Search from '../components/Utils/Search'
 import Table from '../components/Utils/Tables/TableCategories'
 
-
 import '../assets/styles/components/CourseAdmin.scss';
 
 const Categories = (props) => {

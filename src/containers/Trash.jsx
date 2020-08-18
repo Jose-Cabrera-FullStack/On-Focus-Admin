@@ -16,12 +16,12 @@ const Trash = (props) => {
         <div>
             <div className="course__admin flex">
                 <h1>Papelera</h1>
-                <span>Vaciar Papelera</span>
                 <Search/>
             </div>
                 <div className="course__admin__categories flex">
                     <p>Todos</p>
                     <p>Categorias</p>
+                    <p>Vaciar Papelera</p>
                 </div>
                 <Table/> 
 

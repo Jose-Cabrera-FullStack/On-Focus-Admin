@@ -4,7 +4,6 @@ import apiTeachers from "../../api/apiTeachers";
 import "../../assets/styles/components/Teacher.scss";
 
 import Button from "../Utils/Button";
-
 import Photo from "../../assets/static/images/img/photo-put.png";
 import Arrow from "../../assets/static/images/svg/arrow-down-black.svg";
 import Instagram from "../../assets/static/images/svg/instagram-black.svg";
