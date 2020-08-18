@@ -13,7 +13,7 @@ import NotFound from '../containers/NotFound';
 
 const App = () => (
     // Arreglar para produccion las rutas
-    <Router>
+    <BrowserRouter>
         <Switch>
             <Redirect exact from="/" to="/admin" component={Login} />
             <Route exact path="/admin" component={Login} />
@@ -25,7 +25,7 @@ const App = () => (
             <Route exact path="/papelera" component={Trash} />
             <Route component={NotFound} />
         </Switch>
-    </Router>
+    </BrowserRouter>
 )
 
 export default App;

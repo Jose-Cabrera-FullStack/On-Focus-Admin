@@ -25,7 +25,7 @@ export const logoutSession = (id) => {
     document.cookie = `token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT`;
   })
   .then(() => { 
-    window.location.href = "http://localhost:9001/#/admin/"
+    window.location.href = "/admin"
   })
   .catch((err) => {
     console.log(err);

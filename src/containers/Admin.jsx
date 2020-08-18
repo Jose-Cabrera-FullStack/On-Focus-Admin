@@ -25,7 +25,7 @@ const Login = (props) => {
     event.preventDefault();
 
     const ip = ipAddress;
-    const redirectUrl = "http://localhost:9001/#/profesores/";
+    const redirectUrl = "/profesores";
 
     loginUser(username, password, ip, redirectUrl)
   };
