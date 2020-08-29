@@ -1,17 +1,14 @@
-import React from 'react';
+import React from "react";
 
-import '../assets/styles/App.scss';
+import "../assets/styles/App.scss";
 
 const Course = () => {
-  let grid = 'grid-column-2--fix'
-  return(
+  let grid = "grid-column-2--fix";
+  return (
     <div className="App">
-
       <h1>NOT FOUND</h1>
-    
     </div>
-
   );
-}
+};
 
 export default Course;

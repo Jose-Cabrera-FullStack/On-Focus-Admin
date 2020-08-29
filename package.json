@@ -1,12 +1,14 @@
 {
-  "name": "focus",
+  "name": "focus_admin",
   "version": "1.0.0",
   "description": "",
+  "homepage": ".",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --port 9001 --open --mode development",
     "start": "webpack-dev-server --port 9001 --open --mode production",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -46,6 +48,7 @@
     "paypal-checkout": "4.0.311",
     "postcss-loader": "3.0.0",
     "prop-types": "15.7.2",
+    "public-ip": "^4.0.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-hot-loader": "4.12.7",
