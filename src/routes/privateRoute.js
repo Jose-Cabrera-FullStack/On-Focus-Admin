@@ -3,24 +3,25 @@
 
 // If they are: they proceed to the page
 // If not: they are redirected to the login page.
-import React from 'react'
-import { getCookie } from '../actions/sessionActions'
-import { Redirect, Route } from 'react-router-dom'
+import React from "react";
+import { getCookie } from "../actions/sessionActions";
+import { Redirect, Route } from "react-router-dom";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-
   return (
     <Route
       {...rest}
-      render={props =>
+      render={(props) =>
         !getCookie("username") ? (
-            <Redirect to={{ pathname: '/admin', state: { from: props.location } }} />
+          <Redirect
+            to={{ pathname: "/admin", state: { from: props.location } }}
+          />
         ) : (
-            <Component {...props} />
+          <Component {...props} />
         )
       }
     />
-  )
-}
+  );
+};
 
-export default PrivateRoute
+export default PrivateRoute;

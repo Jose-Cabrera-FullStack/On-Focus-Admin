@@ -2,6 +2,7 @@
   "name": "focus_admin",
   "version": "1.0.0",
   "description": "",
+  "homepage": ".",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",

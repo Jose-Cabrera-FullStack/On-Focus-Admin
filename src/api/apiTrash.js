@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const api = axios.create({
     baseURL: config.connectionString,
+    timeout: 10000,
 })
 
 // Trash Endpoints

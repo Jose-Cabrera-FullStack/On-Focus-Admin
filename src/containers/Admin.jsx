@@ -27,7 +27,7 @@ const Login = (props) => {
     const ip = ipAddress;
     const redirectUrl = "/profesores";
 
-    loginUser(username, password, ip, redirectUrl)
+    loginUser(username, password, ip, redirectUrl);
   };
 
   return (
