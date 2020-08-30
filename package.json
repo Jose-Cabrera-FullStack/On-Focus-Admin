@@ -5,7 +5,7 @@
   "homepage": "https://onfocus-admin.herokuapp.com/",
   "main": "index.js",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
