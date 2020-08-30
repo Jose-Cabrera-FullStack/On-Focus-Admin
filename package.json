@@ -4,6 +4,9 @@
   "description": "",
   "homepage": ".",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --port 9001 --open --mode development",
