@@ -6,8 +6,16 @@ class RestoreTrash extends Component {
     event.preventDefault();
 
     if (window.confirm(`Do you want to restore this item?`)) {
-      apiTrash.restoreTrashById(this.props.id);
-      window.location.reload();
+      const payload = this.props.id;
+
+      apiTrash
+      .restoreTrashById(payload)
+      .then((res) => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        alert(err);
+      });
     }
   };
 

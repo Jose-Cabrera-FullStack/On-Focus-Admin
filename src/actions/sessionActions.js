@@ -7,9 +7,9 @@ export const loginUser = (username, password, ip, redirectUrl) => {
   apiSessions
     .createSession(payload)
     .then((res) => {
-      document.cookie = `username=${username}`;
-      document.cookie = `token=${res._id}`;
-      window.location.href = redirectUrl;
+      document.cookie = `username=${res.data.data.username}`;
+      document.cookie = `token=${res.data.data._id}`;
+      window.location.href="/profesores";
     })
     .catch((err) => {
       alert(err);

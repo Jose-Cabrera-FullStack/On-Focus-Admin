@@ -69,6 +69,7 @@ const DataBox = (props) => {
         .insertTeacher(payload)
         .then((res) => {
           window.alert(`Profesor creado exitosamente`);
+          window.location.href="/profesores";
         })
         .catch((err) => {
           console.log(err);

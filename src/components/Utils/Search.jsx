@@ -2,13 +2,15 @@ import React from 'react';
 import Icon from '../../assets/static/images/svg/icon-search.svg';
 import '../../assets/styles/components/Utils.scss';
 import { logoutSession } from '../../actions/sessionActions'
+import { getCookie } from "../../actions/sessionActions";
 
 const Search = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    logoutSession("5f3b40ccd165c945b0dbdd49")
+    
+    const token = getCookie("token")
+    logoutSession(token)
   };
   
   return (

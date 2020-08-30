@@ -3,18 +3,26 @@ import apiCategories from "../../../../api/apiCategories";
 import Icon from "../../../../assets/static/images/svg/icon-trash.svg";
 
 class DeleteCategory extends Component {
-  deleteUser = (event) => {
+  deleteCategory = (event) => {
     event.preventDefault();
 
     if (window.confirm(`Do you want to send this category to trash?`)) {
-      apiCategories.sendCategoryToTrash(this.props.id);
-      window.location.reload();
+      const payload = this.props.id;
+
+      apiCategories
+        .sendCategoryToTrash(payload)
+        .then((res) => {
+          window.location.reload();
+        })
+        .catch((err) => {
+          alert(err);
+        });
     }
   };
 
   render() {
     return (
-      <div onClick={this.deleteUser}>
+      <div onClick={this.deleteCategory}>
         <img src={Icon} alt="Enviar a la papelera" />
       </div>
     );
