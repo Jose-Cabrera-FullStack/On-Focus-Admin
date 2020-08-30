@@ -7,10 +7,16 @@ class DeleteCourse extends Component {
     event.preventDefault();
 
     if (window.confirm(`Do you want to send this course to trash?`)) {
-      const sendToTrashCourse = apiCourses.sendCourseToTrash(this.props.id)
-        if(sendToTrashCourse) {
-        window.location.reload();
-      }
+      const payload = this.props.id;
+
+      apiCourses
+        .sendCourseToTrash(payload)
+        .then((res) => {
+          window.location.reload();
+        })
+        .catch((err) => {
+          alert(err);
+        });
     }
   };
 

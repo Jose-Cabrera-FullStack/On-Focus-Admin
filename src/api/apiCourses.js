@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const api = axios.create({
     baseURL: config.connectionString,
-    timeout: 10000,
+    timeout: 20000,
 })
 
 // Courses Endpoints
