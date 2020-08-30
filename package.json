@@ -2,7 +2,7 @@
   "name": "focus_admin",
   "version": "1.0.0",
   "description": "",
-  "homepage": ".",
+  "homepage": "https://onfocus-admin.herokuapp.com/",
   "main": "index.js",
   "engines": {
     "node": "12.x"
