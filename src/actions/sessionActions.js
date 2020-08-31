@@ -9,10 +9,10 @@ export const loginUser = (username, password, ip, redirectUrl) => {
     .then((res) => {
       document.cookie = `username=${res.data.data.username}`;
       document.cookie = `token=${res.data.data._id}`;
-      window.location.href="/profesores";
+      window.location.href = "/profesores";
     })
     .catch((err) => {
-      alert(err);
+      return err
     });
 };
 

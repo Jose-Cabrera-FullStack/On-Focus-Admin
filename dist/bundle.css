@@ -1,0 +1,793 @@
+@import url(https://fonts.googleapis.com/css?family=Muli&display=swap);@font-face {
+  font-family: "Judson";
+  src: url(font/Judson-Regular.ttf); }
+
+@font-face {
+  font-family: "Mont-Black-Italic";
+  src: url(font/Mont-Black-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Black";
+  src: url(font/Mont-Black.otf); }
+
+@font-face {
+  font-family: "Mont-Bold-Italic";
+  src: url(font/Mont-Bold-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Bold";
+  src: url(font/Mont-Bold.otf); }
+
+@font-face {
+  font-family: "Mont-Light";
+  src: url(font/Mont-Extra-Light.otf); }
+
+@font-face {
+  font-family: "Mont-Light-Italic";
+  src: url(font/Mont-ExtraLight-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Heavy-Italic";
+  src: url(font/Mont-Heavy-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Heavy";
+  src: url(font/Mont-Heavy.otf); }
+
+@font-face {
+  font-family: "Mont-Light-Italic";
+  src: url(font/Mont-Light-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Light";
+  src: url(font/Mont-Light.otf); }
+
+@font-face {
+  font-family: "Mont-Regular-Italic";
+  src: url(font/Mont-Regular-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Regular";
+  src: url(font/Mont-Regular.otf); }
+
+@font-face {
+  font-family: "Mont-Semi-Bold-Italic";
+  src: url(font/Mont-SemiBold-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Semi-Bold";
+  src: url(font/Mont-SemiBold.otf); }
+
+@font-face {
+  font-family: "Mont-Thin-Italic";
+  src: url(font/Mont-Thin-Italic.otf); }
+
+@font-face {
+  font-family: "Mont-Thin";
+  src: url(font/Mont-Thin.otf); }
+
+@media only screen and (max-width: 600px) {
+  .main__description--title {
+    font-size: 30px; }
+  .footer {
+    align-items: flex-start;
+    flex-direction: column; } }
+
+/* <-------BUTTON-------> */
+.btn__primary {
+  color: #f2f2f2;
+  font-size: 16px;
+  width: 140px;
+  height: 41px;
+  border: 1px solid #b38a58;
+  cursor: pointer;
+  text-align: center;
+  background-color: #b38a58;
+  margin: 0 20px 4px 0px;
+  position: relative;
+  bottom: 5px;
+  font-family: 'Mont-Bold', Roboto;
+  border-radius: 2px; }
+
+.btn__primary--admin {
+  margin: 20px 0 0 0; }
+
+.checkbox__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 10px 10px 35px;
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 135.3%;
+  letter-spacing: -0.03em;
+  color: #000000; }
+
+.btn__secundary--about__us {
+  width: 150px;
+  position: relative;
+  top: 120px;
+  left: 120px; }
+
+.checkbox__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee; }
+
+.checkbox__container:hover input ~ .checkmark {
+  background-color: #ccc; }
+
+.checkbox__container input:checked ~ .checkmark {
+  background-color: #03002B; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.checkbox__container input:checked ~ .checkmark:after {
+  display: block; }
+
+.checkbox__container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg); }
+
+/* <-------ANIMATION-------> */
+.btn__primary--fix:hover {
+  background-color: #b38a58;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #b38a58; }
+
+.btn__primary:hover {
+  background-color: #b38a58;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #b38a58; }
+
+.btn__secundary--buy:hover {
+  fill: #fff;
+  background-color: #b38a58;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out; }
+
+.btn__primary--login:hover {
+  border: 1px solid #b38a58; }
+
+/* <-------ANIMATION-------> */
+/* <-------BUTTON-------> */
+.container {
+  max-width: 1200px;
+  margin: 0; }
+
+.row {
+  display: flex; }
+
+.col-1 {
+  width: 8.333333333333333%; }
+
+.col-2 {
+  width: 16.6666666666666%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.3333333333%; }
+
+.col-5 {
+  width: 41.6666666667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.3333333333%; }
+
+.col-8 {
+  width: 66.6666666667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.3333333333%; }
+
+.col-11 {
+  width: 91.6666666667; }
+
+.col-12 {
+  width: 100%; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding: 10px; }
+
+@media (max-width: 900px) {
+  .row {
+    display: inherit; }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%; } }
+
+body {
+  margin: 0;
+  font-family: 'Mont-Regular', Roboto; }
+
+a {
+  text-decoration: none; }
+
+input[type="text"] {
+  padding: 0px 0px 0 10px;
+  font-family: Mont-Regular;
+  font-size: 12px; }
+
+input:focus {
+  outline: solid 1px #b38a58; }
+
+textarea:focus {
+  outline: solid 1px #b38a58; }
+
+.display-none {
+  display: none; }
+
+.flex {
+  display: flex; }
+
+.grid-1 {
+  grid-column: 1; }
+
+.grid-2 {
+  grid-column: 2; }
+
+.grid-3 {
+  grid-column: 4; }
+
+.grid-4 {
+  grid-column: 5; }
+
+.grid-column-2--fix {
+  grid-template-columns: 1fr 1.7fr;
+  margin: 0 0 100px 0; }
+
+.grid-column-2 {
+  grid-template-columns: 1fr 1fr;
+  margin: 0 0 100px 0; }
+
+.grid-column-3 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . . .';
+  margin: 0px 0 70px 0px; }
+
+.text-decoration {
+  text-decoration: none; }
+
+.none {
+  display: none; }
+.utils__hero {
+  height: 252px;
+  background-image: linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(img/hero-course.png);
+  background-size: cover; }
+
+.utils__hero__contact {
+  height: 252px;
+  background-image: linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(img/hero-contact.png);
+  background-size: cover; }
+
+.utils__hero__profile {
+  height: 254px;
+  background-image: linear-gradient(180deg, rgba(3, 0, 43, 0) 0.52%, #03002bd9 113.6%), url(img/hero-profile.png);
+  background-size: cover; }
+
+.utils__hero__title {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 39px;
+  line-height: 113.3%;
+  color: #F2F2F2;
+  margin: 0;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.beadcrumbs {
+  margin: 20px 0 0 0px;
+  cursor: pointer; }
+
+.beadcrumbs:hover {
+  color: red; }
+
+.beadcrumbs h5 {
+  margin: 20px 0px 0 10px;
+  font-family: Mont-Light;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #4F4F4F; }
+
+.beadcrumbs img {
+  margin: 20px 0 0 0px; }
+.register {
+  background-image: linear-gradient(to bottom, #03002B, #03002b80), url(img/log-in.png);
+  background-size: cover;
+  margin: 0;
+  height: 140vh; }
+
+.register__img {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -310%); }
+
+.register__box {
+  width: 520px;
+  height: 621px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -45%); }
+
+.register__box__inside {
+  margin: 25px 75px 50px 75px; }
+
+.register__box__inside__img {
+  margin: 10px 0 0 90px; }
+
+.register__box__inside h1 {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 31px;
+  line-height: 135.3%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #03002B;
+  margin: 20px 0 0 0; }
+
+.register__box__inside h2 {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 135.3%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #03002B;
+  margin: 10px 0 20px 0px; }
+
+.register__box__inside h5 {
+  font-family: 'Mont-Semi-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 135.3%;
+  letter-spacing: -0.02em;
+  color: #03002B;
+  margin: 16px 0px 10px 0px; }
+
+.register__box__inside input {
+  width: 365px;
+  height: 37px;
+  background: #FFFFFF;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box; }
+
+.btn__secundary--register {
+  width: 169px;
+  margin: 30px 0 0 100px; }
+.admin {
+  background-image: linear-gradient(to bottom, #03002B, #03002b80), url(img/log-in.png);
+  background-size: cover;
+  margin: 0;
+  height: 100vh; }
+
+.admin__inside {
+  width: 40px;
+  position: relative;
+  left: 20%;
+  top: 35%; }
+
+.admin__login__img {
+  width: 288px;
+  height: 288px; }
+
+.admin__form {
+  width: 397px;
+  height: 372px;
+  background: #03002B;
+  border-radius: 0px 2px 2px 2px; }
+
+.admin__login__login {
+  margin: -80px 0 0 60px; }
+
+.admin__form__inside {
+  padding: 1px 0 0 50px; }
+
+.admin__inside__option {
+  margin: 0; }
+
+.admin__inside__option__left {
+  width: 188px;
+  height: 37.17px;
+  background: #B38A58;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.53);
+  border-radius: 2px; }
+
+.admin__inside__option__right {
+  width: 180px;
+  height: 38px;
+  background: #03002B;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.53);
+  border-radius: 2px; }
+
+.admin__inside__option__right {
+  cursor: pointer; }
+
+.admin__inside__option__right:hover {
+  width: 180px;
+  height: 38px;
+  background: #03002B;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.53);
+  border-radius: 2px; }
+
+.admin__form__inside h5 {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 130.7%;
+  color: #B38A58;
+  margin: 50px 0 30px 0; }
+
+.admin__inside__option__left p {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130.7%;
+  text-align: center;
+  color: #03002B;
+  position: relative;
+  top: -2px; }
+
+.admin__inside__option__right {
+  margin: 0 0px 0 29px; }
+
+.admin__inside__option__right p {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 130.7%;
+  text-align: center;
+  color: #FFFFFF;
+  position: relative;
+  top: -2px; }
+
+.admin__form__inside__input {
+  width: 273.03px;
+  height: 43.07px;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin: 0 0 20px 0; }
+
+.admin__form__inside__ckeckout {
+  width: 14.6px;
+  height: 14.6px;
+  background: #F2F2F2;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 3px; }
+
+.admin__form__inside__ckeckout__text {
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  position: relative;
+  line-height: 130.7%;
+  color: #FFFFFF;
+  bottom: 8px;
+  left: 6px; }
+.side__bar {
+  width: 244px;
+  background: #03002B; }
+
+.side__bar__img {
+  width: 66px;
+  height: 62px;
+  margin: 54px 89px 46px 89px; }
+
+.side__bar ol {
+  margin: 0;
+  padding: 0; }
+
+.side__bar ol a {
+  background: red; }
+
+.side__bar li {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  height: 46px;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  justify-content: center;
+  align-items: center;
+  color: #BDBDBD;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  cursor: pointer; }
+
+.side__bar li a {
+  position: relative;
+  top: 10px;
+  margin: 0;
+  color: #BDBDBD; }
+
+.side__bar li:hover {
+  cursor: pointer;
+  background: #B38A58;
+  color: #fff; }
+
+.side__bar--select li {
+  background: #B38A58;
+  color: #fff; }
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%; }
+
+.course__admin__inside__checkbox {
+  margin: 0; }
+
+#customers tr {
+  border-bottom: 1px solid #ddd;
+  width: 30px; }
+
+#customers td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px; }
+
+#customers tr:hover {
+  background-color: #ddd;
+  cursor: pointer; }
+
+#customers th {
+  padding-top: 12px;
+  width: 180px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: #03002B;
+  padding: 15px 0px 15px 10px; }
+.course__admin {
+  margin: 99px 0 0 51px; }
+
+.course__admin h1 {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  color: #03002B; }
+
+.btn__primary--course__admin {
+  margin: 15px 0px 0 40px; }
+
+.course__admin__input {
+  width: 240px;
+  height: 29px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.22);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.22); }
+
+.course__admin__input__img {
+  position: relative;
+  bottom: 0px;
+  left: -25px; }
+
+.course__admin__session {
+  position: absolute;
+  right: 30px;
+  top: 30px; }
+
+.course__admin__session p {
+  font-family: 'Mont-Light';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.02em;
+  color: #B38A58;
+  text-align-last: right;
+  position: relative;
+  right: 15px; }
+
+.course__admin__categories {
+  margin: 0 0 0 50px; }
+
+.course__admin__categories p {
+  margin: 0 26px 0 0;
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #4F4F4F; }
+
+.course__admin__inside {
+  height: 832px;
+  left: 295px;
+  top: 191px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 5px 5px 0px 0px;
+  margin: 20px 68px 0 50px; }
+
+.course__admin__inside__title {
+  list-style: none;
+  margin: 0px 0 20px 0px; }
+
+.course__admin__inside__title li {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: #03002B;
+  position: relative;
+  top: 13px; }
+
+.course__admin__inside__title__element--name {
+  margin: 0px 200px 0 20px; }
+
+.course__admin__inside__title__element--teach {
+  margin: 0 100px 0 0; }
+
+.course__admin__inside__title__element--categories {
+  margin: 0 70px 0 0; }
+
+.course__admin__inside__title__element--date {
+  margin: 0 46px 0 0; }
+
+.course__admin__inside__title__element--state {
+  margin: 0 80px 0 0; }
+
+.course__admin__inside__text {
+  list-style: none; }
+
+.course__admin__inside__text li {
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #4F4F4F; }
+
+.course__admin__inside__line {
+  border: 1px solid #E0E0E0; }
+
+.course_admin_restore_trash {
+  color: #B38A58;
+  font-weight: 600; }
+
+.course_admin_delete_permanently {
+  font-style: italic; }
+.teacher__box {
+  width: 1038px;
+  height: 666px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+  margin: 0px 0 100px 50px; }
+
+.teacher__box__inside {
+  padding: 40px 64px 50px 54px; }
+
+.teacher__box h3 {
+  font-family: 'Mont-Bold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #B38A58; }
+
+.teacher__box h5 {
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: -0.02em;
+  color: #4F4F4F;
+  margin: 10px 0 10px 0; }
+
+.teacher__box input {
+  width: 437px;
+  height: 29px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.teacher__box textarea {
+  width: 437px;
+  height: 109px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 2px; }
+
+.teacher__box__inside__left__photo {
+  margin: 10px 0 0 20px; }
+
+.teacher__box__inside__left__profile {
+  font-family: 'Mont-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #B38A58; }
+
+.teacher__box__inside__left__recommended {
+  font-family: 'Mont-Regular';
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: -0.02em;
+  color: #4F4F4F; }
+
+.teacher__box__inside__left__arrow {
+  position: relative;
+  right: 25px; }
+
+.teacher__box__inside__right {
+  margin: 0 0 0 40px; }
+
+.teacher__box__inside__right img {
+  margin: 0px 10px 0 0; }
+
+.teacher__box__inside__right__inside {
+  margin: 10px 0 0 0; }
+
+.btn__primary--teacher {
+  position: relative;
+  top: 50px;
+  left: 300px; }
+
+.btn__primary--teacher:hover {
+  background: #03002B; }
