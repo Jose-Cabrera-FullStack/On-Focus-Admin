@@ -19,6 +19,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
+      {
+        test: /\.js$/,
         loader: "babel-loader",
         exclude: /node_modules/,
       },

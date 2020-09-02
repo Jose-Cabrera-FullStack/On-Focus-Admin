@@ -3,7 +3,7 @@ import Button from "../components/Utils/Button";
 import Logo from "../assets/static/images/img/admin-logo.png";
 import "../assets/styles/components/Register.scss";
 import "../assets/styles/components/Admin.scss";
-import { ipAddress, loginUser } from "../actions/sessionActions";
+import sessionActions from "../actions/sessionActions";
 import GeneralModal from "../components/Utils/Modals/GeneralModal";
 
 const Login = (props) => {
@@ -27,14 +27,15 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const ip = ipAddress;
     const redirectUrl = "/profesores";
 
-    const login = loginUser(username, password, ip, redirectUrl);
-console.log("result:" + login)
-    if (!login === true) {
-      setModalShow(true);
-    }
+    Promise.resolve(sessionActions.loginUser(username, password))
+      .then((result) => {
+        result ? (window.location.href = redirectUrl) : setModalShow(true);
+      })
+      .catch((err) => {
+        setModalShow(true);
+      });
   };
 
   return (

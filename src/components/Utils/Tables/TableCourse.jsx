@@ -17,17 +17,17 @@ const SideBar = () => {
         setIsLoaded(false);
       })
       .catch((err) => {
-        console.log(err);
+        setIsLoaded(false);
       });
   }, []);
-  
-  return data.length == 0 ? (
-    <section className="loadingDiv">
-      <p>No hay níngun curso aún. Intenta añadir uno.</p>
-    </section>
-  ) : isLoaded ? (
+
+  return isLoaded ? (
     <section className="loadingDiv">
       <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+    </section>
+  ) : !data ? (
+    <section className="loadingDiv">
+      <p>No hay níngun curso aún. Intenta añadir uno.</p>
     </section>
   ) : (
     <section className="course__admin__inside">

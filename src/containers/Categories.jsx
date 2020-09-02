@@ -27,8 +27,8 @@ const Categories = (props) => {
 
     const trueValue = true;
     const publishedValue = "published";
-    
-    const payload = { name, trueValue, publishedValue};
+
+    const payload = { name, trueValue, publishedValue };
 
     console.log(payload);
 

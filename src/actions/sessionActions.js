@@ -1,19 +1,24 @@
-const apiSessions = require("../api/apiSessions");
-const publicIp = require("public-ip");
+import apiSessions from "../api/apiSessions";
+import publicIp from "public-ip";
 
-export const loginUser = (username, password, ip, redirectUrl) => {
+export const loginUser = async (username, password) => {
+  let ip;
+  ip = await ipAddress();
+
   const payload = { username, password, ip };
 
-  apiSessions
+  const login = await apiSessions
     .createSession(payload)
     .then((res) => {
       document.cookie = `username=${res.data.data.username}`;
       document.cookie = `token=${res.data.data._id}`;
-      window.location.href = "/profesores";
+      return true;
     })
     .catch((err) => {
-      return err
+      return false;
     });
+    
+  return login;
 };
 
 export const logoutSession = (id) => {
@@ -58,7 +63,7 @@ export const checkSession = () => {
   }
 };
 
-export const ipAddress = () => publicIp.v4();
+export const ipAddress = async () => await publicIp.v4();
 
 const sessionActions = {
   loginUser,

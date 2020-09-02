@@ -1,23 +1,34 @@
 import React, { useState, useEffect } from "react";
 import apiTeachers from "../../../api/apiTeachers";
 import RowTeachers from "./Data/RowTeachers";
+import Loader from "react-loader-spinner";
 import "../../../assets/styles/components/Table.scss";
 
 const SideBar = () => {
   const [data, SetData] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(true);
 
   useEffect(() => {
     apiTeachers
       .getAllTeachers()
       .then((res) => {
         SetData(res.data.data);
+        setIsLoaded(false);
       })
       .catch((err) => {
-        console.log(err);
+        setIsLoaded(false);
       });
   }, []);
 
-  return (
+  return isLoaded ? (
+    <section className="loadingDiv">
+      <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
+    </section>
+  ) : !data ? (
+    <section className="loadingDiv">
+      <p>No hay níngun profesor aún. Intenta añadir uno.</p>
+    </section>
+  ) : (
     <section className="course__admin__inside">
       <table id="customers">
         <tbody>
