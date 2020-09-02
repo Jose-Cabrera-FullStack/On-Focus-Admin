@@ -3,7 +3,8 @@ import Button from "../components/Utils/Button";
 import Logo from "../assets/static/images/img/admin-logo.png";
 import "../assets/styles/components/Register.scss";
 import "../assets/styles/components/Admin.scss";
-import { ipAddress, loginUser } from "../actions/sessionActions";
+import sessionActions from "../actions/sessionActions";
+import GeneralModal from "../components/Utils/Modals/GeneralModal";
 
 const Login = (props) => {
   const EMAIL_REGEX = new RegExp(
@@ -12,6 +13,8 @@ const Login = (props) => {
 
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
+
+  const [modalShow, setModalShow] = useState(false);
 
   const handleChangeUsername = (e) => {
     setUsername(e.target.value);
@@ -24,10 +27,15 @@ const Login = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const ip = ipAddress;
     const redirectUrl = "/profesores";
 
-    loginUser(username, password, ip, redirectUrl);
+    Promise.resolve(sessionActions.loginUser(username, password))
+      .then((result) => {
+        result ? (window.location.href = redirectUrl) : setModalShow(true);
+      })
+      .catch((err) => {
+        setModalShow(true);
+      });
   };
 
   return (
@@ -78,6 +86,13 @@ const Login = (props) => {
             </div>
           </form>
         </div>
+        <GeneralModal
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          centered={true}
+          title="Acceso Denegado"
+          message="Verifique su usuario o constraseña"
+        />
       </div>
     </section>
   );
