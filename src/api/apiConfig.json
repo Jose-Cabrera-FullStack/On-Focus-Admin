@@ -1,4 +1,4 @@
 {
-    "connectionString": "http://localhost:4000/api",
+    "connectionString": "http://backend-devel.herokuapp.com/api",
     "secret": ""
 }
