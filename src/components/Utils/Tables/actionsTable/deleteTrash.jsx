@@ -5,26 +5,23 @@ class DeleteTrash extends Component {
   deleteUser = (event) => {
     event.preventDefault();
 
-    if (window.confirm(`Do you want to delete this item permanently?`)) {
+    if (window.confirm(`¿Desea eliminar este item permanentemente?`)) {
       const payload = this.props.id;
 
       apiTrash
-      .deleteTrashById(payload)
-      .then((res) => {
-        window.location.reload();
-      })
-      .catch((err) => {
-        alert(err);
-      });
+        .deleteTrashById(payload)
+        .then((res) => {
+          window.location.reload();
+        })
+        .catch((err) => {
+          alert(err);
+        });
     }
   };
 
   render() {
     return (
-      <div
-        onClick={this.deleteUser}
-        className="course_admin_delete_permanently"
-      >
+      <div onClick={this.deleteUser} className="deletePermanently">
         Eliminar definitivamente
       </div>
     );

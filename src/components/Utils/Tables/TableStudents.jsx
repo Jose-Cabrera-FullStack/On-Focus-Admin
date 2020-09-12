@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import apiStudents from "../../../api/apiStudents";
+import Table from "react-bootstrap/Table";
 import RowStudents from "./Data/RowStudents";
-import "../../../assets/styles/components/Table.scss";
+import Moment from "moment";
 import Loader from "react-loader-spinner";
-import Moment from 'moment';
 
-const SideBar = () => {
+const TableStudents = () => {
   const [data, SetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
 
@@ -22,44 +22,48 @@ const SideBar = () => {
   }, []);
 
   return isLoaded ? (
-    <section className="loadingDiv">
+    <div>
       <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
-    </section>
+    </div>
   ) : !data ? (
-    <section className="loadingDiv">
-      <p>No hay níngun estudiante aún..</p>
-    </section>
+    <div>
+      <p>No hay ninguna categoría aún. Intenta añadir una.</p>
+    </div>
   ) : (
-    <section className="course__admin__inside">
-      <table id="customers">
-        <tbody>
-          <tr>
-            <th>Nombre</th>
-            <th>País</th>
-            <th>Email</th>
-            <th>Fecha registro</th>
-            <th>Medio de pago</th>
-            <th>Cursos comprados</th>
-            <th></th>
-          </tr>
-          {Object.keys(data).map((index) => {
-            return (
-                  <RowStudents
+    <div className="col-md-12">
+      <div className="row insideTableSection">
+        <Table hover responsive>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>País</th>
+              <th>E-mail</th>
+              <th>Fecha de Registro</th>  
+              <th>Medio de Pago</th>
+              <th>Cursos Comprados</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.keys(data).map((index) => {
+              return (
+                <RowStudents
                   key={index}
-                    id={data[index]._id}
-                    name={data[index].name}
-                    country={data[index].country}
-                    email={data[index].email}
-                    signup_date={Moment(data[index].signup_date).format('DD/MM/YY')} 
-                    payment_method={data[index].payment_method}
-                    purchased_courses={data[index].purchased_courses}
-                  />
-            );
-          })}
-        </tbody>
-      </table>
-    </section>
+                  id={data[index]._id}
+                  name={data[index].name}
+                  country={data[index].country}
+                  email={data[index].email}
+                  signup_date={Moment(data[index].createdAt).format("DD/MM/YY")}
+                  payment_method={data[index].payment_method}
+                  purchased_courses={data[index].purchased_courses}
+                />
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
+    </div>
   );
 };
 
-export default SideBar;
+export default TableStudents;

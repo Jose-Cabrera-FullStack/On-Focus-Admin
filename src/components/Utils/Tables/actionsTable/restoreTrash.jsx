@@ -5,7 +5,7 @@ class RestoreTrash extends Component {
   deleteUser = (event) => {
     event.preventDefault();
 
-    if (window.confirm(`Do you want to restore this item?`)) {
+    if (window.confirm(`¿Desea restaurar este item?`)) {
       const payload = this.props.id;
 
       apiTrash
@@ -21,7 +21,7 @@ class RestoreTrash extends Component {
 
   render() {
     return (
-      <div onClick={this.deleteUser} className="course_admin_restore_trash">
+      <div onClick={this.deleteUser} className="restoreTrash">
         Restaurar
       </div>
     );

@@ -1,5 +1,5 @@
 const config = require("./apiConfig.json");
-import axios from 'axios'
+const axios = require("axios");
 
 const api = axios.create({
     baseURL: config.connectionString,

@@ -1,20 +1,24 @@
 import React from 'react';
-import '../../../../assets/styles/components/Table.scss'
 import DeleteCategory from '../actionsTable/deleteCategory'
+import ChangeStatusCategory from '../actionsTable/changeStatusCategory'
 
 const RowCourses = ({id, name, creation_date, status, coursesAssigned }) => {
-  if(status == true) {
+  
+  var status_read
+
+  if(status === true) {
     var check = "checked"
-    var status_read = "Activo"
+    status_read = "Activo"
   } else {
-    var status_read = "Inactivo"
+    status_read = "Inactivo"
   }
+
   return(
         <>  
             <td><input type="checkbox" name="" id=""/></td>
             <td>{name}</td>
             <td>{creation_date}</td>
-            <td><input type="checkbox" name="" id="" checked={check}/>{status_read}</td>
+            <td><ChangeStatusCategory id={id} status={check} status_read={status_read}/></td>
             <td>{coursesAssigned}</td>
             <td>Añadir/quitar cursos</td>
             <td><span><DeleteCategory id={id} /></span></td>

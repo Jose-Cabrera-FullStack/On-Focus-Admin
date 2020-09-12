@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import apiTrash from "../../../api/apiTrash";
 import RowTrash from "./Data/RowTrash";
-import Moment from 'moment';
+import Moment from "moment";
 import Loader from "react-loader-spinner";
-import "../../../assets/styles/components/Table.scss";
+import Table from "react-bootstrap/Table";
 
-const SideBar = () => {
+const TableTrash = () => {
   const [data, SetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
 
@@ -20,45 +20,52 @@ const SideBar = () => {
         setIsLoaded(false);
       });
   }, []);
-  
+
   return isLoaded ? (
-    <section className="loadingDiv">
+    <div>
       <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
-    </section>
+    </div>
   ) : !data ? (
-    <section className="loadingDiv">
+    <div>
       <p>No hay ninguna categoría aún. Intenta añadir una.</p>
-    </section>
+    </div>
   ) : (
-    <section className="course__admin__inside">
-      <table id="customers">
-        <tbody>
-          <tr>
-            <th className="course__admin__inside__checkbox">
-              <input type="checkbox" name="" id="" />
-            </th>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Fecha de creación</th>
-            <th></th>
-            <th></th>
-          </tr>
-          {Object.keys(data).map((index) => {
-            return (
-              <tr key={index}>
-                <RowTrash
-                  id={data[index].original_id_hash}
-                  name={data[index].name}
-                  type={data[index].type}
-                  creation_date={Moment(data[index].creation_date).format('DD/MM/YY')}
-                />
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </section>
+    <div className="col-md-12">
+      <div className="row insideTableSection">
+        <Table hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>Nombre</th>
+              <th>Tipo</th>
+              <th>Fecha de Creacion</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {Object.keys(data).map((index) => {
+              return (
+                <tr key={index}>
+                  <RowTrash
+                    id={data[index].original_id_hash}
+                    name={data[index].name}
+                    type={data[index].type}
+                    creation_date={Moment(data[index].createdAt).format(
+                      "DD/MM/YY"
+                    )}
+                  />
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
+    </div>
   );
 };
 
-export default SideBar;
+export default TableTrash;

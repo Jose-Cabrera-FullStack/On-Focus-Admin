@@ -1,31 +1,30 @@
-import React from 'react';
-import { BrowserRouter,Switch,HashRouter as Router,Route,Redirect } from 'react-router-dom';
-import PrivateRoute from './privateRoute';
-import '../assets/styles/App.scss';
-import Login from '../containers/Admin';
-import Categories from '../containers/Categories';
-import CourseList from '../containers/CourseList';
-import Teachers from '../containers/Teachers';
-import TeachersMakers from '../containers/TeachersMakers';
-import Student from '../containers/Student';
-import Trash from '../containers/Trash';
-import NotFound from '../containers/NotFound';
-
+import React from "react";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import PrivateRoute from "./privateRoute";
+import "../assets/styles/app.scss";
+import Login from "../containers/Admin";
+import Categories from "../containers/Categories";
+import Courses from "../containers/Courses";
+import Teachers from "../containers/Teachers";
+import Students from "../containers/Students";
+import Trash from "../containers/Trash";
+import TeachersAdd from "../containers/TeachersAdd";
+import CoursesAdd from "../containers/CoursesAdd";
 
 const App = () => (
-    // Arreglar para produccion las rutas
-    <BrowserRouter>
-        <Switch>
-            <Redirect exact from="/" to="/admin" component={Login} />
-            <PrivateRoute path="/cursos" component={CourseList} />
-            <PrivateRoute path="/categorias" component={Categories} />
-            <PrivateRoute path="/profesores" component={Teachers} />
-            <PrivateRoute path="/profesores-creacion" component={TeachersMakers} />
-            <PrivateRoute path="/alumnos" component={Student} />
-            <PrivateRoute path="/papelera" component={Trash} />
-            <Route component={Login} />
-        </Switch>
-    </BrowserRouter>
-)
+  <BrowserRouter>
+    <Switch>
+      <Redirect exact from="/" to="/admin" component={Login} />
+      <PrivateRoute path="/courses" component={Courses} />
+      <PrivateRoute path="/categories" component={Categories} />
+      <PrivateRoute path="/teachers" component={Teachers} />
+      <PrivateRoute path="/students" component={Students} />
+      <PrivateRoute path="/trash" component={Trash} />
+      <PrivateRoute path="/addTeachers" component={TeachersAdd} />
+      <PrivateRoute path="/addCourses" component={CoursesAdd} />
+      <Route component={Login} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default App;

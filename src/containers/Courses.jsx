@@ -1,28 +1,41 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Sidebar from "../components/Utils/Sidebar";
+import Navbar from "../components/Utils/Navbar";
+import TableCourses from "../components/Utils/Tables/TableCourses";
+import Button from "../components/Utils/Button";
 
-import HeroCoursePlus from "../components/Course/HeroCoursePlus";
-import CourseInfo from "../components/Course/CourseInfo";
-import CourseInclusive from "../components/Course/CourseInclusive";
-import CourseForMe from "../components/Course/CourseForMe";
-import CourseModule from "../components/Course/CourseModule";
-import CourseRecomendation from "../components/Course/CourseRecomendation";
-import CourseTeacher from "../components/Course/CourseTeacher";
-import HowWeTeach from "../components/Principal/HowWeTeach";
-
-import "../assets/styles/App.scss";
-
-const Course = () => {
-  let grid = "grid-column-2--fix";
+const Course = (props) => {
   return (
-    <div className="App">
-      <HeroCoursePlus />
-      <CourseInfo />
-      <CourseInclusive />
-      <CourseForMe />
-      <CourseModule />
-      <CourseRecomendation />
-      <CourseTeacher />
-      <HowWeTeach grid={grid} />
+    <div className="wrapper">
+      <Sidebar />
+
+      <div id="content">
+        <Navbar />
+
+        <div className="row d-flex section_title align-items-center mt-2">
+          <div className="col-md-3">
+            <h1>Listado de Cursos</h1>
+          </div>
+          <div className="col-md-3">
+            <Link to="/addCourses">
+              <Button
+                text={"Añadir nuevo"}
+                position={"btn__primary--course__admin"}
+              />
+            </Link>
+          </div>
+        </div>
+
+        <div className="col-md-12 d-flex mt-5">
+          <div className="row filters">
+            <p>Todos</p>
+            <p>Categorias</p>
+          </div>
+        </div>
+
+        <TableCourses />
+      </div>
     </div>
   );
 };

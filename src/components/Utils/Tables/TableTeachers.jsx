@@ -2,11 +2,18 @@ import React, { useState, useEffect } from "react";
 import apiTeachers from "../../../api/apiTeachers";
 import RowTeachers from "./Data/RowTeachers";
 import Loader from "react-loader-spinner";
-import "../../../assets/styles/components/Table.scss";
+import Table from "react-bootstrap/Table";
 
-const SideBar = () => {
+const TableTeachers = () => {
   const [data, SetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
+
+  const formatString = (raw) => {
+    let stepOne = raw.join(", ");
+    let stepTwo = raw ? stepOne.slice(0, 20)+'...' : null;
+    
+    return stepTwo;
+  }
 
   useEffect(() => {
     apiTeachers
@@ -21,43 +28,52 @@ const SideBar = () => {
   }, []);
 
   return isLoaded ? (
-    <section className="loadingDiv">
+    <div>
       <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} />
-    </section>
+    </div>
   ) : !data ? (
-    <section className="loadingDiv">
-      <p>No hay níngun profesor aún. Intenta añadir uno.</p>
-    </section>
+    <div>
+      <p>No hay ninguna categoría aún. Intenta añadir una.</p>
+    </div>
   ) : (
-    <section className="course__admin__inside">
-      <table id="customers">
-        <tbody>
-          <tr>
-            <th className="course__admin__inside__checkbox">
-              <input type="checkbox" name="" id="" />
-            </th>
-            <th>Nombre</th>
-            <th>Estado</th>
-            <th>Curso dictados</th>
-            <th></th>
-            <th></th>
-          </tr>
-          {Object.keys(data).map((index) => {
-            return (
-              <tr key={index}>
-                <RowTeachers
-                  id={data[index]._id}
-                  name={data[index].name}
-                  status={data[index].status}
-                  coursesAssigned={"no data"}
-                />
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </section>
+    <div className="col-md-12">
+      <div className="row insideTableSection">
+        <Table hover responsive>
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" />
+              </th>
+              <th>Nombre</th>
+              <th>Estado</th>
+              <th>Curso dictados</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {Object.keys(data).map((index) => {
+              let coursesArray = [];
+              Object.keys(data[index].courses).map((i) => {
+                return coursesArray.push(data[index].courses[i].name)
+              });
+              return (
+                <tr key={index}>
+                  <RowTeachers
+                    id={data[index]._id}
+                    full_name={data[index].full_name}
+                    status={data[index].status}
+                    coursesAssigned={formatString(coursesArray)}
+                  />
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
+    </div>
   );
 };
 
-export default SideBar;
+export default TableTeachers;

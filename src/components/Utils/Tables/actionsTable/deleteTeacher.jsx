@@ -6,7 +6,7 @@ class DeleteTeacher extends Component {
   deleteUser = (event) => {
     event.preventDefault();
 
-    if (window.confirm(`Do you want to send this teacher to trash?`)) {
+    if (window.confirm(`¿Desea enviar este profesor a la papelera?`)) {
       const payload = this.props.id;
 
       apiTeachers
@@ -23,7 +23,7 @@ class DeleteTeacher extends Component {
   render() {
     return (
       <div onClick={this.deleteUser}>
-        <img src={Icon} alt="Borrar" />
+        <img src={Icon} alt="Enviar a la papelera" className="sendToTrash" />
       </div>
     );
   }
