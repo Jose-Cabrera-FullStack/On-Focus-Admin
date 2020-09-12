@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "../../../../assets/styles/components/Table.scss";
 import ArrowDown from "../../../../assets/static/images/svg/arrow-down.svg";
 
 import Collapse from "react-bootstrap/Collapse";
@@ -13,10 +12,6 @@ const RowStudents = ({
   payment_method,
   purchased_courses,
 }) => {
-  if (status == "Activo") {
-    var check = "checked";
-  }
-
   const [open, setOpen] = useState(false);
 
   return (

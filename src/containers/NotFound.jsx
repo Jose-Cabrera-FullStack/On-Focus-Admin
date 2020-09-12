@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../assets/styles/App.scss";
+import "../assets/styles/app.scss";
 
 const Course = () => {
   let grid = "grid-column-2--fix";

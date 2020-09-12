@@ -1,26 +1,30 @@
 import React from "react";
-
-import SideBar from "../components/Utils/SideBar";
-import Search from "../components/Utils/Search";
-import Table from "../components/Utils/Tables/TableTrash";
-
-import "../assets/styles/components/CourseAdmin.scss";
+import Sidebar from "../components/Utils/Sidebar";
+import Navbar from "../components/Utils/Navbar";
+import TableTrash from "../components/Utils/Tables/TableTrash";
 
 const Trash = (props) => {
   return (
-    <div className="App flex">
-      <SideBar />
-      <div>
-        <div className="course__admin flex">
-          <h1>Papelera</h1>
-          <Search />
+    <div className="wrapper">
+      <Sidebar />
+
+      <div id="content">
+        <Navbar />
+
+        <div className="row d-flex section_title align-items-center mt-2">
+          <div className="col-md-3">
+            <h1>Papelera</h1>
+          </div>
         </div>
-        <div className="course__admin__categories flex">
-          <p>Todos</p>
-          <p>Categorias</p>
-          <p>Vaciar Papelera</p>
+
+        <div className="col-md-12 d-flex mt-5">
+          <div className="row filters">
+            <p>Todos</p>
+            <p>Tipo</p>
+          </div>
         </div>
-        <Table />
+
+        <TableTrash />
       </div>
     </div>
   );

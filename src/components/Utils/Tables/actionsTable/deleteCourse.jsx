@@ -23,7 +23,7 @@ class DeleteCourse extends Component {
   render() {
     return (
       <div onClick={this.deleteUser}>
-        <img src={Icon} alt="Enviar a la papelera" />
+        <img src={Icon} alt="Enviar a la papelera" className="sendToTrash" />
       </div>
     );
   }
