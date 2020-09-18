@@ -42,7 +42,6 @@ const TableCategories = () => {
         <Table hover responsive>
           <thead>
             <tr>
-              <th><input type="checkbox"/></th>
               <th>Nombre</th>
               <th>Fecha de Creación</th>
               <th>Estado</th>

@@ -1,4 +1,3 @@
-const config = require("./apiConfig.json");
 const axios = require("axios");
 
 const api = axios.create({

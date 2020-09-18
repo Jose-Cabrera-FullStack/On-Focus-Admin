@@ -35,9 +35,6 @@ const TableCourses = () => {
         <Table hover responsive>
           <thead>
             <tr>
-              <th>
-                <input type="checkbox" />
-              </th>
               <th>Nombre</th>
               <th>Profesor</th>
               <th>Categoria</th>

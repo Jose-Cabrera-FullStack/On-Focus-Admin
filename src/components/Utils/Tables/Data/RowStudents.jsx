@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ArrowDown from "../../../../assets/static/images/svg/arrow-down.svg";
+import ArrowUp from "../../../../assets/static/images/svg/arrow-up-black.svg";
 
 import Collapse from "react-bootstrap/Collapse";
 
@@ -24,12 +25,16 @@ const RowStudents = ({
         <td>{payment_method}</td>
         <td>{purchased_courses}</td>
         <td>
-          <img src={ArrowDown} alt="Ver más" onClick={() => setOpen(!open)} />
+          <img src={open? ArrowUp : ArrowDown} alt="Ver más" onClick={() => setOpen(!open)} />
         </td>
       </tr>
       <Collapse in={open}>
         <tr>
-          <td>Curso 1 2 clases finalizadas, 20% completado el curso.</td>
+          <td colSpan="3">
+            Curso 1 2 clases finalizadas, <br/> 20% completado el curso.
+          </td>
+          <td colSpan="2">Vencimiento del curso <br/> 03/04/21</td>
+          <td colSpan="2">Última clase tomada <br/> 21/04/20</td>
         </tr>
       </Collapse>
     </>

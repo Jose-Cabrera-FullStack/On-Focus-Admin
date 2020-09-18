@@ -15,7 +15,6 @@ const RowCourses = ({id, name, teacher, category, creation_date, status }) => {
   
   return(
         <>  
-            <td><input type="checkbox" name="" id=""/></td>
             <td>{name}</td>
             <td>{teacher}</td>
             <td>{category}</td>
