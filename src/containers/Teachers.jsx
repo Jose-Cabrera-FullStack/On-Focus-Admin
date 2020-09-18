@@ -30,7 +30,7 @@ const Teachers = (props) => {
         <div className="col-md-12 d-flex mt-5">
           <div className="row filters">
             <p>Todos</p>
-            <p>Categorias</p>
+            <p>Orden Alfabético</p>
           </div>
         </div>
 

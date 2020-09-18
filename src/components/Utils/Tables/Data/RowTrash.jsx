@@ -24,9 +24,6 @@ const RowTrash = ({ id, name, type, creation_date }) => {
 
   return (
     <>
-      <td>
-        <input type="checkbox" name="" id="" />
-      </td>
       <td>{name}</td>
       <td>{readable_type}</td>
       <td>{creation_date}</td>

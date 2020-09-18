@@ -4,6 +4,7 @@ import Navbar from "../components/Utils/Navbar";
 import TableCategories from "../components/Utils/Tables/TableCategories";
 import CollapseAddCategory from "../components/Utils/Tables/actionsTable/collapseAddCategory";
 import Button from "react-bootstrap/Button";
+import DropdownButton from 'react-bootstrap/DropdownButton'
 
 const Categories = (props) => {
   const [open, setOpen] = useState(false);

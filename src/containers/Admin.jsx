@@ -19,6 +19,7 @@ const Login = (props) => {
     if (localStorage.getItem("user") != null) {
       const userInput = document.getElementById("username");
       userInput.value = localStorage.getItem("user");
+      setUsername(userInput.value);
     }
   });
 
@@ -99,7 +100,7 @@ const Login = (props) => {
                     id="username"
                     placeholder="Usuario"
                     value={username}
-                    onChange={handleChangeUsername}
+                    onSubmit={handleChangeUsername}
                   />
                 </div>
                 <div className="row col-md-10 mb-4">

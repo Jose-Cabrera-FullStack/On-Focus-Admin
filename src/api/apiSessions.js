@@ -1,8 +1,7 @@
-const config = require("./apiConfig.json");
 const axios = require("axios");
 
 const api = axios.create({
-    baseURL: config.connectionString,
+    baseURL: process.env.REACT_APP_API_URL,
     timeout: 10000,
 })
 

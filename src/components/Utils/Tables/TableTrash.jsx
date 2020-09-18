@@ -35,9 +35,6 @@ const TableTrash = () => {
         <Table hover responsive>
           <thead>
             <tr>
-              <th>
-                <input type="checkbox" />
-              </th>
               <th>Nombre</th>
               <th>Tipo</th>
               <th>Fecha de Creacion</th>

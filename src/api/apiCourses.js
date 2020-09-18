@@ -1,9 +1,8 @@
-const config = require("./apiConfig.json");
 const axios = require("axios");
 
 const api = axios.create({
-    baseURL: config.connectionString,
-    timeout: 20000,
+    baseURL: process.env.REACT_APP_API_URL,
+    timeout: 10000,
 })
 
 // Courses Endpoints
