@@ -9,6 +9,13 @@ const TableCategories = () => {
   const [data, SetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
 
+  const formatString = (raw) => {
+    let stepOne = raw.join(", ");
+    let stepTwo = raw ? stepOne.slice(0, 20)+'...' : null;
+    
+    return stepTwo;
+  }
+
   useEffect(() => {
     apiCategories
       .getAllCategories()
@@ -47,6 +54,10 @@ const TableCategories = () => {
 
           <tbody>
           {Object.keys(data).map((index) => {
+              let coursesArray = [];
+              Object.keys(data[index].courses).map((i) => {
+                return coursesArray.push(data[index].courses[i].name)
+              });
               Moment.locale("en");
               return (
                 <tr key={index}>
@@ -57,7 +68,7 @@ const TableCategories = () => {
                       "DD/MM/YY"
                     )}
                     status={data[index].status}
-                    coursesAssigned={"Lorem Ipsum"}
+                    coursesAssigned={formatString(coursesArray)}
                   />
                 </tr>
               );

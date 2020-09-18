@@ -26,14 +26,27 @@ a {
   right: 0;
 }
 
+.margin-fix-15 {
+  margin-left: -15px;
+}
+
 .admin {
   background-image: linear-gradient(to bottom, #03002B, #03002b80), url(../static/images/img/log-in.png);
   background-size: cover;
   height: 100vh;
 }
 
-.administratorButton {
+.activeButton {
   background: #B38A58;
+  color: #FFFFFF;
+}
+
+.inactiveButton {
+  background: #03002B;
+  color: #FFFFFF;
+}
+
+.administratorButton {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.53);
   border-radius: 2px;
   outline: none;
@@ -41,13 +54,11 @@ a {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  color: #03002B;
   border: none;
   padding: 10px 20px;
 }
 
 .teacherButton {
-  background: #03002B;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.53);
   border-radius: 2px;
   outline: none;

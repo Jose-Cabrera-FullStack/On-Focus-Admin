@@ -11,9 +11,11 @@ const AddCourseForm = (props) => {
   const [data, SetData] = useState([]);
   const [dataTeachers, SetDataTeachers] = useState([]);
   const [name, setName] = useState();
-  const [title, setTitle] = useState();
   const [description, setDescription] = useState();
   const [video, setVideo] = useState();
+  const [modules, setModules] = useState();
+  const [duration, setDuration] = useState();
+  const [descriptionCourse, setDescriptionCourse] = useState();
 
   // const handleChangePhoto = (e) => {
   //   setPhoto(e.target.value);
@@ -29,6 +31,19 @@ const AddCourseForm = (props) => {
 
   const handleChangeVideo = (e) => {
     setVideo(e.target.value);
+  };
+
+  const handleInputModules = (e) => {
+    setModules(e.target.value);
+  };
+
+  const handleInputDuration = (e) => {
+    setDuration(e.target.value);
+  };
+
+  
+  const handleInputDescriptionCourse = (e) => {
+    setDescriptionCourse(e.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -99,7 +114,10 @@ const AddCourseForm = (props) => {
   const teachersOptions = [];
 
   Object.keys(dataTeachers).map((index) => {
-    let obPush = { value: dataTeachers[index]._id, label: dataTeachers[index].full_name };
+    let obPush = {
+      value: dataTeachers[index]._id,
+      label: dataTeachers[index].full_name,
+    };
     return teachersOptions.push(obPush);
   });
 
@@ -107,6 +125,7 @@ const AddCourseForm = (props) => {
     <form id="createCourse" onSubmit={handleSubmit} className="addForms">
       <div className="row">
         <div className="col-md-8">
+
           <div className="insideTableSection p-5">
             <fieldset>
               <div className="mb-4">
@@ -137,6 +156,75 @@ const AddCourseForm = (props) => {
               </div>
             </fieldset>
           </div>
+
+          <div className="insideTableSection p-5 mt-3">
+            <fieldset>
+              <div className="mb-2">
+                <h4>Sobre este curso</h4>
+                <label htmlFor="description_about_this_course">Descripción</label>
+                <textarea
+                  name="description_about_this_course"
+                  value={descriptionCourse}
+                  onChange={handleInputDescriptionCourse}
+                />
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="insideTableSection p-5 mt-3">
+          <fieldset>
+              <div className="mb-2">
+                <h4>Que incluye este curso</h4>
+                <label htmlFor="courses_includes">Item 1</label>
+               
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="insideTableSection p-5 mt-3">
+          <fieldset>
+              <div className="mb-2">
+                <h4>¿Este curso es para mí?</h4>
+                <label htmlFor="courses_target">Item 1</label>
+               
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="insideTableSection p-5 mt-3">
+          <fieldset>
+              <div className="mb-2">
+                <h2>Crear modulos</h2>
+               
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="insideTableSection p-5 mt-3">
+          <fieldset>
+              <div className="mb-2">
+                <h2>Recomendaciones</h2>
+               
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="insideTableSection p-5 mt-3">
+          <fieldset>
+              <div className="mb-2">
+                <h2>Precio</h2>
+               
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="row rowSeparator">
+              <Button
+                text={"Publicar curso"}
+                position={"btn__primary--teacher"}
+                type="submit"
+              />
+            </div>
         </div>
 
         <div className="col-md-4">
@@ -153,8 +241,10 @@ const AddCourseForm = (props) => {
           </div>
 
           <div className="insideTableSection p-3 mt-3">
-            <label htmlFor="category">Imágen destacada</label>
-            <label htmlFor="category">+Cargar Imágen / Cambiar imágen</label>
+            <label htmlFor="featured_image">Imágen destacada</label>
+            <label htmlFor="load_featured_image">
+              +Cargar Imágen / Cambiar imágen
+            </label>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               placeat quod, vero non vitae at rerum, temporibus impedit
@@ -164,23 +254,23 @@ const AddCourseForm = (props) => {
           </div>
 
           <div className="insideTableSection p-3 mt-3">
-            <label htmlFor="category">Cantidad de modulos</label>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              placeat quod, vero non vitae at rerum, temporibus impedit
-              obcaecati modi unde eius, dolorem tempora. Voluptatem dolorum ipsa
-              corrupti atque reiciendis.
-            </p>
+            <label htmlFor="modules">Cantidad de modulos</label>
+            <input
+              type="text"
+              name="modules"
+              value={modules}
+              onChange={handleInputModules}
+            />
           </div>
 
           <div className="insideTableSection p-3 mt-3">
-            <label htmlFor="category">Duración del curso</label>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
-              placeat quod, vero non vitae at rerum, temporibus impedit
-              obcaecati modi unde eius, dolorem tempora. Voluptatem dolorum ipsa
-              corrupti atque reiciendis.
-            </p>
+            <label htmlFor="duration">Duración del curso</label>
+            <input
+              type="text"
+              name="duration"
+              value={duration}
+              onChange={handleInputDuration}
+            />
           </div>
 
           <div className="insideTableSection p-3 mt-3">

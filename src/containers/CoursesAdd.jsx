@@ -12,9 +12,13 @@ const CoursesAdd = (props) => {
       <div id="content">
         <Navbar />
 
-        <div className="row d-flex section_title align-items-center mt-2 mb-4">
-          <div className="col-md-4">
+        <div className="row d-flex section_title align-items-center mt-5 mb-4">
+          <div className="col-md-8">
             <h1>Agregar nuevo curso</h1>
+          </div>
+          <div className="col-md-4 d-flex justify-content-end">
+            <p className="mr-2">Salir y cancelar</p>
+            <p>Guardar Cambios</p>
           </div>
         </div>
 

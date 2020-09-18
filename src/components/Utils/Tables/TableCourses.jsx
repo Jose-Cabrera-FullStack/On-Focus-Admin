@@ -27,7 +27,7 @@ const TableCourses = () => {
     </div>
   ) : !data ? (
     <div>
-      <p>No hay ninguna categoría aún. Intenta añadir una.</p>
+      <p>No hay ningun curso aún. Intenta añadir uno.</p>
     </div>
   ) : (
     <div className="col-md-12">

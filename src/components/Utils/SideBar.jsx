@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/static/images/svg/logo-small.svg";
 import "../../assets/styles/components/sidebar.scss";
+import { getCookie } from "../../actions/sessionActions";
 
 const Sidebar = () => {
   return (
@@ -13,25 +14,33 @@ const Sidebar = () => {
       </div>
 
       <ul>
-        <NavLink activeClassName="active" to="/courses">
-          <li>Cursos</li>
-        </NavLink>
+        {getCookie("role") === "0" && (
+          <NavLink activeClassName="active" to="/courses">
+            <li>Cursos</li>
+          </NavLink>
+        )}
 
-        <NavLink activeClassName="active" to="/categories">
-          <li>Categorías</li>
-        </NavLink>
+        {getCookie("role") === "0" && (
+          <NavLink activeClassName="active" to="/categories">
+            <li>Categorías</li>
+          </NavLink>
+        )}
 
-        <NavLink activeClassName="active" to="/teachers">
-          <li>Profesores</li>
-        </NavLink>
+        {getCookie("role") === "0" && (
+          <NavLink activeClassName="active" to="/teachers">
+            <li>Profesores</li>
+          </NavLink>
+        )}
 
         <NavLink activeClassName="active" to="/students">
           <li>Alumnos</li>
         </NavLink>
 
-        <NavLink activeClassName="active" to="/trash">
-          <li>Papelera</li>
-        </NavLink>
+        {getCookie("role") === "0" && (
+          <NavLink activeClassName="active" to="/trash">
+            <li>Papelera</li>
+          </NavLink>
+        )}
       </ul>
     </nav>
   );
