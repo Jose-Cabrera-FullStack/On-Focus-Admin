@@ -1,7 +1,7 @@
 import apiSessions from "../api/apiSessions";
 import publicIp from "public-ip";
 
-export const loginUser = async (username, password) => {
+export const loginUser = async (username, password, userType) => {
   let ip;
   ip = await ipAddress();
 
@@ -12,6 +12,7 @@ export const loginUser = async (username, password) => {
     .then((res) => {
       document.cookie = `username=${res.data.data.username}`;
       document.cookie = `token=${res.data.data._id}`;
+      document.cookie = `role=${userType}`;
       return true;
     })
     .catch((err) => {
@@ -27,6 +28,7 @@ export const logoutSession = (id) => {
     .then((res) => {
       document.cookie = `username=  ; expires = Thu, 01 Jan 1970 00:00:00 GMT`;
       document.cookie = `token= ; expires = Thu, 01 Jan 1970 00:00:00 GMT`;
+      document.cookie = `role= ; expires = Thu, 01 Jan 1970 00:00:00 GMT`;
     })
     .then(() => {
       window.location.href = "/admin";

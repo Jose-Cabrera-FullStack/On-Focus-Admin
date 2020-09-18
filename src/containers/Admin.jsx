@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Utils/Button";
 import Logo from "../assets/static/images/img/admin-logo.png";
 import sessionActions from "../actions/sessionActions";
@@ -12,6 +12,27 @@ const Login = (props) => {
   const [modalShow, setModalShow] = useState(false);
   const [spinnerShow, setSpinnerShow] = useState(false);
 
+  const [teacher, setTeacher] = useState(false);
+  const [admin, setAdmin] = useState(true);
+
+  useEffect(() => {
+    if (localStorage.getItem("user") != null) {
+      const userInput = document.getElementById("username");
+      userInput.value = localStorage.getItem("user");
+    }
+  });
+
+  const toogleAdmin = () => {
+    setAdmin(!admin);
+    setTeacher(!teacher)
+  };
+  
+  const toogleTeacher = () => {
+    setTeacher(!teacher);
+    setAdmin(!admin)
+
+  };
+
   const handleChangeUsername = (e) => {
     setUsername(e.target.value);
   };
@@ -20,13 +41,26 @@ const Login = (props) => {
     setPassword(e.target.value);
   };
 
+  const handleRememberMe = (event) => {
+    let username = document.getElementById("username");
+
+    if (event.target.checked) {
+      localStorage.setItem("user", username.value);
+    } else {
+      localStorage.setItem("user", "");
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setSpinnerShow(true);
 
     const redirectUrl = "/courses";
 
-    Promise.resolve(sessionActions.loginUser(username, password))
+    let userType;
+    admin ? userType = 0 : userType = 1;
+
+    Promise.resolve(sessionActions.loginUser(username, password, userType))
       .then((result) => {
         setSpinnerShow(false);
         result ? (window.location.href = redirectUrl) : setModalShow(true);
@@ -45,8 +79,12 @@ const Login = (props) => {
         </div>
         <div className="col-md-4">
           <div className="row col-md-12 h-100 d-flex align-items-center justify-content-between">
-            <button className="administratorButton">Soy administrador</button>
-            <button className="teacherButton">Soy profesor</button>
+            <button className={admin ? 'administratorButton activeButton': 'administratorButton inactiveButton'} onClick={toogleAdmin}>
+              Soy administrador
+            </button>
+            <button className={teacher ? 'teacherButton activeButton': 'teacherButton inactiveButton'}  onClick={toogleTeacher}>
+              Soy profesor
+            </button>
           </div>
           <div className="loginBox container-fluid ">
             <form onSubmit={handleSubmit} id="loginForm">
@@ -74,9 +112,17 @@ const Login = (props) => {
                     onChange={handleChangePassword}
                   />
                 </div>
-                <div className="row col-md-10 align-items-center">
-                  <input type="checkbox" name="rememberme" id="rememberme" />
-                  <label form="rememberme">Recordame</label>
+                <div className="row col-md-10 align-items-center mt-1 mb-3">
+                  <label form="rememberme">
+                    <input
+                      type="checkbox"
+                      name="rememberme"
+                      id="rememberme"
+                      className="mr-2"
+                      onClick={handleRememberMe}
+                    />
+                    Recordame
+                  </label>
                 </div>
                 <Button />
               </div>
@@ -87,7 +133,7 @@ const Login = (props) => {
             onHide={() => setModalShow(false)}
             centered={true}
             title="Acceso Denegado"
-            message="Verifique su usuario o constraseña"
+            message="Verifique su usuario o contraseña"
           />
         </div>
       </div>

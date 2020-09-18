@@ -27,7 +27,7 @@ const TableTrash = () => {
     </div>
   ) : !data ? (
     <div>
-      <p>No hay ninguna categoría aún. Intenta añadir una.</p>
+      <p>Papelera vacía.</p>
     </div>
   ) : (
     <div className="col-md-12">

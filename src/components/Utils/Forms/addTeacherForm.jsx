@@ -160,18 +160,6 @@ const AddTeacherForm = (props) => {
               classNamePrefix="select"
               onChange={handleInputChange}
             />
-            {/* <div className="inner-addon right-addon">
-                <img
-                  src={Arrow}
-                  className="glyphicon glyphicon-search"
-                  alt="Escribe el nombre del curso"
-                />
-                <input
-                  type="text"
-                  className="searchInput"
-                  placeholder="Escribe el nombre del curso"
-                />
-              </div> */}
           </div>
 
           <div className="col-md-6">
